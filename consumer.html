@@ -19,6 +19,30 @@
     --success: #22c55e; --warning: #eab308; --danger: #ef4444;
     --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.3);
     --glow-purple: 0 0 20px rgba(168, 85, 247, 0.3);
+    --grid-line: rgba(0,240,255,0.03);
+    --grid-overlay: rgba(0,240,255,0.08);
+    --purple-overlay: rgba(168,85,247,0.06);
+    --header-bg: rgba(10,10,15,0.6);
+    --header-bg-scrolled: rgba(10,10,15,0.8);
+    --slide-overlay-1: rgba(10,10,15,0.88);
+    --slide-overlay-transparent: rgba(10,10,15,0);
+    --slide-overlay-bottom: rgba(10,10,15,0.4);
+}
+[data-theme="light"] {
+    --bg: #f5f6fa; --bg2: #ffffff; --bg3: #eef0f6; --bg4: #e0e2ec;
+    --ink: #1a1a2e; --muted: #6b7280; --rule: #d1d5e0;
+    --accent: #0891b2; --accent2: #7c3aed; --accent3: #ea580c;
+    --success: #16a34a; --warning: #ca8a04; --danger: #dc2626;
+    --glow-cyan: 0 0 20px rgba(8, 145, 178, 0.2);
+    --glow-purple: 0 0 20px rgba(124, 58, 237, 0.2);
+    --grid-line: rgba(8,145,178,0.04);
+    --grid-overlay: rgba(8,145,178,0.05);
+    --purple-overlay: rgba(124,58,237,0.04);
+    --header-bg: rgba(245,246,250,0.7);
+    --header-bg-scrolled: rgba(245,246,250,0.9);
+    --slide-overlay-1: rgba(245,246,250,0.88);
+    --slide-overlay-transparent: rgba(245,246,250,0);
+    --slide-overlay-bottom: rgba(245,246,250,0.4);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,20 +54,20 @@ body {
 }
 body::before {
     content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px);
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 50px 50px; pointer-events: none; z-index: 0;
     animation: gridMove 20s linear infinite;
 }
 @keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(50px)} }
 body::after {
     content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(ellipse at top, rgba(0,240,255,0.08) 0%, transparent 50%), radial-gradient(ellipse at bottom right, rgba(168,85,247,0.06) 0%, transparent 50%);
+    background: radial-gradient(ellipse at top, var(--grid-overlay) 0%, transparent 50%), radial-gradient(ellipse at bottom right, var(--purple-overlay) 0%, transparent 50%);
     pointer-events: none; z-index: 0;
 }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-.site-header { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.6); backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); border-bottom: 1px solid transparent; padding: 6px 0; transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, border-color 0.3s ease; }
-.site-header.scrolled { background: rgba(10,10,15,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--header-bg); backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); border-bottom: 1px solid transparent; padding: 6px 0; transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, border-color 0.3s ease; }
+.site-header.scrolled { background: var(--header-bg-scrolled); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
 .logo { display: flex; flex-direction: column; text-decoration: none; position: relative; }
 .logo-main { font-family: 'BigShoulders', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
@@ -59,6 +83,9 @@ body::after {
 .nav-item.nav-products:hover, .nav-item.nav-products.active { color: #fbbf24; border-color: rgba(234,179,8,0.5); background: rgba(234,179,8,0.12); }
 .nav-item.nav-products.active::after { background: #eab308; box-shadow: 0 0 12px rgba(234,179,8,0.4); }
 .header-right { display: flex; align-items: center; gap: 16px; }
+.theme-toggle { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--rule); background: var(--bg3); color: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.3s ease; flex-shrink: 0; }
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,240,255,0.08); }
+.theme-toggle:active { transform: scale(0.92); }
 .live-indicator { display: flex; align-items: center; gap: 6px; font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--success); }
 .live-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,0.7)} 50%{opacity:0.8;box-shadow:0 0 0 8px rgba(34,197,94,0)} }
@@ -69,12 +96,12 @@ body::after {
 .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
 .slide.active { opacity: 1; pointer-events: auto; }
 .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; }
-.slide-bg::after { content: ''; position: absolute; top: 0; left: 0; width: 55%; height: 100%; background: linear-gradient(90deg, rgba(10,10,15,0.88) 0%, rgba(10,10,15,0.5) 70%, transparent 100%); }
-.slide-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, transparent 60%, rgba(10,10,15,0.4) 100%); z-index: 1; }
+.slide-bg::after { content: ''; position: absolute; top: 0; left: 0; width: 55%; height: 100%; background: linear-gradient(90deg, var(--slide-overlay-1) 0%, var(--slide-overlay-bottom) 70%, transparent 100%); }
+.slide-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, transparent 60%, var(--slide-overlay-bottom) 100%); z-index: 1; }
 .slide-content { position: relative; z-index: 2; padding: 56px 64px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 48px; max-width: 50%; }
 .slide-title { font-size: 32px; font-weight: 700; line-height: 1.3; margin-bottom: 14px; color: var(--ink); text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
 .slide-brand { font-family: 'JetBrainsMono', monospace; font-size: 13px; color: var(--accent2); margin-bottom: 16px; text-shadow: 0 1px 10px rgba(0,0,0,0.8); }
-.slide-overview { font-size: 15px; color: #d0d0d8; line-height: 1.7; margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-shadow: 0 1px 10px rgba(0,0,0,0.8); }
+.slide-overview { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-shadow: 0 1px 10px rgba(0,0,0,0.8); }
 .slide-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #0a0a0f; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 14px; transition: all 0.3s ease; }
 .slide-link:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,240,255,0.3); }
 .slider-nav { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 12px 0 4px; }
@@ -251,10 +278,7 @@ body::after {
 
                 </nav>
                 <div class="header-right">
-                    <div class="live-indicator">
-                        <span class="live-dot"></span>
-                        <span>实时更新</span>
-                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="切换日/夜模式" title="切换日/夜模式">🌙</button>
                 </div>
             </div>
         </div>
@@ -288,7 +312,7 @@ body::after {
                     <h3 class="card-title">Hugging Face发布Microduck开源机器人 售价399美元</h3>
                     <p class="card-overview">开源AI平台Hugging Face推出的售价399美元的双足机器人Microduck引发市场对端侧AI的关注。该机器人外形像鸭子，可切换轮式形态，能完成站立、步行、踢球等动作。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">低价、开源的机器人产品引爆市场，预示着“机器人消费电子化”趋势加速。端侧AI技术的成熟将进一步降低机器人使用门槛，推动其进入千家万户。</span>
                     </div>
                 </div>
@@ -309,7 +333,7 @@ body::after {
                     <h3 class="card-title">甘肃张掖：科普嘉年华启幕</h3>
                     <p class="card-overview">甘肃省张掖市举办2026年全国科普月主场活动暨科普嘉年华。活动现场，孩子们饶有兴致地围观四足机器狗的动态表演。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">机器狗作为科普教育的生动教材，走进西北地区，拉近了青少年与前沿科技的距离，有助于提升公众对机器人的认知与接受度。</span>
                     </div>
                 </div>
@@ -330,7 +354,7 @@ body::after {
                     <h3 class="card-title">科创赛事进街区“机甲狂欢”活动点亮成都锦江区夜经济</h3>
                     <p class="card-overview">“智启兰桂·机甲狂欢”活动持续在成都兰桂坊进行。机器狗带球奔跑、机甲对战等精彩环节吸引大量市民游客观看，有效拉长了夜间消费时段。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">机器狗与商圈消费场景的结合持续深化，成为撬动夜经济增长的新亮点，同时也为人机协同技术提供了实景验证场。</span>
                     </div>
                 </div>
@@ -351,7 +375,7 @@ body::after {
                     <h3 class="card-title">机器狗校门口发糖 南京市长江路小学迎新生</h3>
                     <p class="card-overview">8月29日，南京市长江路小学在一年级新生入学仪式上，安排机器狗在校门口背着糖果迎接新生。此举旨在向孩子们预告新学期的“STEAM+AI”课程。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">机器狗进入小学校园，成为启蒙AI教育的趣味载体，反映了公众对机器人接受度的提升，以及其在教育场景下的新应用。</span>
                     </div>
                 </div>
@@ -372,7 +396,7 @@ body::after {
                     <h3 class="card-title">机甲狂欢 机器人赛事点亮成都锦江夜间商圈</h3>
                     <p class="card-overview">8月28日晚，“智启兰桂·机甲狂欢”活动在成都兰桂坊启幕。作为“2026宇树机器人街头争霸赛”的子活动，现场进行了机器狗带球入场的2V2足球赛、机甲拳击擂台赛等。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">机器狗走出展馆，进入商圈夜经济场景，从专业展示走向大众娱乐与消费。这种“科技赛事+商圈消费”模式，为机器狗的人机交互与场景验证提供了新思路。</span>
                     </div>
                 </div>
@@ -393,7 +417,7 @@ body::after {
                     <h3 class="card-title">中南民族大学别样迎新，机器狗为新生和家长当向导</h3>
                     <p class="card-overview">8月28日至30日，中南民族大学在武昌火车站迎新，使用一只机器狗作为特殊“学长”，为新生和家长引路、表演，并引导至迎新专车。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">机器狗进入高校迎新这一民生场景，展示了其在导览、引导等公共服务领域的应用潜力，也体现了高校对前沿科技的拥抱。</span>
                     </div>
                 </div>
@@ -414,7 +438,7 @@ body::after {
                     <h3 class="card-title">现代汽车经销商未来不只卖车，还要卖机器人</h3>
                     <p class="card-overview">现代汽车CEO表示，未来消费者或企业客户或许可以像购买汽车一样，前往现代经销商处选购人形机器人或机器狗，甚至通过现代旗下金融服务获得分期融资。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">全球车企巨头将机器狗纳入经销体系，具身智能从企业采购走向大众消费品类，“机器人消费电子化”趋势获得主流车企背书。</span>
                     </div>
                 </div>
@@ -435,7 +459,7 @@ body::after {
                     <h3 class="card-title">长隆抢跑全球首个具身智能主题乐园，游客会为机器人买单？</h3>
                     <p class="card-overview">智元与长隆集团签署战略合作协议，双方将共同打造全球首个具身智能主题乐园，包括沉浸式机器人主题乐园、机器动物总动员、大型机器人马戏秀、赛博主题巡游以及机器人服务酒店等，探索具身智能与文旅产业融合发展新范式。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">具身智能首次大规模进入文旅场景，从工业、安防向消费娱乐延伸，商业模式创新打开增量市场空间。</span>
                     </div>
                 </div>
@@ -456,7 +480,7 @@ body::after {
                     <h3 class="card-title">机器狗化身智能导盲犬 具身智能加速融入日常生活</h3>
                     <p class="card-overview">央视报道2026世界机器人大会，高德地图展示机器狗导盲带路能力，普渡机器人称终端接受度持续提升，具身智能正加速融入日常生活。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">官方媒体背书具身智能民生场景落地，导航能力与机器人融合打开导盲、助老等新服务空间。</span>
                     </div>
                 </div>
@@ -477,7 +501,7 @@ body::after {
                     <h3 class="card-title">智东西/新浪财经：宇树主导的四足机器人市场，它悄悄拿到了6%</h3>
                     <p class="card-overview">SAG数据显示2026上半年全球四足机器人出货约2.6万台，宇树1.36万台占52%；维他动力出货约1600台占6%，消费级机器狗“大头”首销预售6540台、订单近亿元。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">消费级四足市场从宇树独大走向多元竞争，消费应用占比升至45%成最大市场，“机器人消费电子化”趋势加速。</span>
                     </div>
                 </div>
@@ -691,6 +715,27 @@ body::after {
             if (window.scrollY > 20) header.classList.add('scrolled');
             else header.classList.remove('scrolled');
         }, { passive: true });
+    }
+    const toggle = document.getElementById('themeToggle');
+    if (toggle) {
+        const stored = localStorage.getItem('jiquan-theme');
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (stored === 'light' || (!stored && prefersLight)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            toggle.textContent = '☀';
+        }
+        toggle.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                document.documentElement.removeAttribute('data-theme');
+                toggle.textContent = '🌙';
+                localStorage.setItem('jiquan-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggle.textContent = '☀';
+                localStorage.setItem('jiquan-theme', 'light');
+            }
+        });
     }
 })();
 </script>

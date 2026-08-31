@@ -19,6 +19,30 @@
     --success: #22c55e; --warning: #eab308; --danger: #ef4444;
     --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.3);
     --glow-purple: 0 0 20px rgba(168, 85, 247, 0.3);
+    --grid-line: rgba(0,240,255,0.03);
+    --grid-overlay: rgba(0,240,255,0.08);
+    --purple-overlay: rgba(168,85,247,0.06);
+    --header-bg: rgba(10,10,15,0.6);
+    --header-bg-scrolled: rgba(10,10,15,0.8);
+    --slide-overlay-1: rgba(10,10,15,0.88);
+    --slide-overlay-transparent: rgba(10,10,15,0);
+    --slide-overlay-bottom: rgba(10,10,15,0.4);
+}
+[data-theme="light"] {
+    --bg: #f5f6fa; --bg2: #ffffff; --bg3: #eef0f6; --bg4: #e0e2ec;
+    --ink: #1a1a2e; --muted: #6b7280; --rule: #d1d5e0;
+    --accent: #0891b2; --accent2: #7c3aed; --accent3: #ea580c;
+    --success: #16a34a; --warning: #ca8a04; --danger: #dc2626;
+    --glow-cyan: 0 0 20px rgba(8, 145, 178, 0.2);
+    --glow-purple: 0 0 20px rgba(124, 58, 237, 0.2);
+    --grid-line: rgba(8,145,178,0.04);
+    --grid-overlay: rgba(8,145,178,0.05);
+    --purple-overlay: rgba(124,58,237,0.04);
+    --header-bg: rgba(245,246,250,0.7);
+    --header-bg-scrolled: rgba(245,246,250,0.9);
+    --slide-overlay-1: rgba(245,246,250,0.88);
+    --slide-overlay-transparent: rgba(245,246,250,0);
+    --slide-overlay-bottom: rgba(245,246,250,0.4);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,20 +54,20 @@ body {
 }
 body::before {
     content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px);
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 50px 50px; pointer-events: none; z-index: 0;
     animation: gridMove 20s linear infinite;
 }
 @keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(50px)} }
 body::after {
     content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(ellipse at top, rgba(0,240,255,0.08) 0%, transparent 50%), radial-gradient(ellipse at bottom right, rgba(168,85,247,0.06) 0%, transparent 50%);
+    background: radial-gradient(ellipse at top, var(--grid-overlay) 0%, transparent 50%), radial-gradient(ellipse at bottom right, var(--purple-overlay) 0%, transparent 50%);
     pointer-events: none; z-index: 0;
 }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-.site-header { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.6); backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); border-bottom: 1px solid transparent; padding: 6px 0; transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, border-color 0.3s ease; }
-.site-header.scrolled { background: rgba(10,10,15,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--header-bg); backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); border-bottom: 1px solid transparent; padding: 6px 0; transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, border-color 0.3s ease; }
+.site-header.scrolled { background: var(--header-bg-scrolled); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
 .logo { display: flex; flex-direction: column; text-decoration: none; position: relative; }
 .logo-main { font-family: 'BigShoulders', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
@@ -59,6 +83,9 @@ body::after {
 .nav-item.nav-products:hover, .nav-item.nav-products.active { color: #fbbf24; border-color: rgba(234,179,8,0.5); background: rgba(234,179,8,0.12); }
 .nav-item.nav-products.active::after { background: #eab308; box-shadow: 0 0 12px rgba(234,179,8,0.4); }
 .header-right { display: flex; align-items: center; gap: 16px; }
+.theme-toggle { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--rule); background: var(--bg3); color: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.3s ease; flex-shrink: 0; }
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,240,255,0.08); }
+.theme-toggle:active { transform: scale(0.92); }
 .live-indicator { display: flex; align-items: center; gap: 6px; font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--success); }
 .live-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,0.7)} 50%{opacity:0.8;box-shadow:0 0 0 8px rgba(34,197,94,0)} }
@@ -69,12 +96,12 @@ body::after {
 .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
 .slide.active { opacity: 1; pointer-events: auto; }
 .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; }
-.slide-bg::after { content: ''; position: absolute; top: 0; left: 0; width: 55%; height: 100%; background: linear-gradient(90deg, rgba(10,10,15,0.88) 0%, rgba(10,10,15,0.5) 70%, transparent 100%); }
-.slide-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, transparent 60%, rgba(10,10,15,0.4) 100%); z-index: 1; }
+.slide-bg::after { content: ''; position: absolute; top: 0; left: 0; width: 55%; height: 100%; background: linear-gradient(90deg, var(--slide-overlay-1) 0%, var(--slide-overlay-bottom) 70%, transparent 100%); }
+.slide-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, transparent 60%, var(--slide-overlay-bottom) 100%); z-index: 1; }
 .slide-content { position: relative; z-index: 2; padding: 56px 64px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 48px; max-width: 50%; }
 .slide-title { font-size: 32px; font-weight: 700; line-height: 1.3; margin-bottom: 14px; color: var(--ink); text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
 .slide-brand { font-family: 'JetBrainsMono', monospace; font-size: 13px; color: var(--accent2); margin-bottom: 16px; text-shadow: 0 1px 10px rgba(0,0,0,0.8); }
-.slide-overview { font-size: 15px; color: #d0d0d8; line-height: 1.7; margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-shadow: 0 1px 10px rgba(0,0,0,0.8); }
+.slide-overview { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-shadow: 0 1px 10px rgba(0,0,0,0.8); }
 .slide-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #0a0a0f; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 14px; transition: all 0.3s ease; }
 .slide-link:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,240,255,0.3); }
 .slider-nav { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 12px 0 4px; }
@@ -251,10 +278,7 @@ body::after {
 
                 </nav>
                 <div class="header-right">
-                    <div class="live-indicator">
-                        <span class="live-dot"></span>
-                        <span>实时更新</span>
-                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="切换日/夜模式" title="切换日/夜模式">🌙</button>
                 </div>
             </div>
         </div>
@@ -288,7 +312,7 @@ body::after {
                     <h3 class="card-title">开源机器人Microduck突然爆火！端侧AI受关注 823亿龙头高开秒板</h3>
                     <p class="card-overview">受Hugging Face推出低价机器人Microduck消息影响，A股端侧AI概念股活跃，瑞芯微涨停，市值达823亿元。市场认为，端侧AI将推动机器人从“云端依赖”走向“本地智能”。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">资本市场对“机器人+端侧AI”这一趋势给出积极反馈。具备本地AI推理能力的低成本机器人，有望成为继智能手机之后，端侧AI的下一个爆款应用。</span>
                     </div>
                 </div>
@@ -309,7 +333,7 @@ body::after {
                     <h3 class="card-title">招商积余：灵卫四足机器狗已实现与招商π智慧服务平台联动</h3>
                     <p class="card-overview">招商积余在投资者互动平台披露，灵卫四足机器狗已实现与招商π智慧服务平台联动，可识别现场异常并自动派发工单，形成处置-复检关单的业务闭环，目前处于小规模项目试点阶段。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">物业龙头推动机器狗与智慧管理平台深度融合，从“单机巡检”升级为“系统化作业闭环”，为行业规模化复制奠定基础。</span>
                     </div>
                 </div>
@@ -330,7 +354,7 @@ body::after {
                     <h3 class="card-title">小鹏机器人首轮融资9亿美元、估值63亿美元刷新纪录，二季度净亏损却同比扩大近1.8倍</h3>
                     <p class="card-overview">小鹏汽车机器人子公司与投资者签署股份购买协议，拟募集超9亿美元，投后估值超63亿美元，创中国企业机器人领域单笔最大规模融资纪录。IDG资本领投，腾讯、阿里巴巴战略跟投。资金用于旗舰人形机器人IRON研发及2026年底量产。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">汽车巨头重金押注具身智能，资本向头部集中趋势明显；人形机器人量产时间表明确，行业从研发竞赛进入产能竞赛。</span>
                     </div>
                 </div>
@@ -351,7 +375,7 @@ body::after {
                     <h3 class="card-title">宇树上市开盘暴涨 6 倍，王兴兴的 10 年长跑进入下半场</h3>
                     <p class="card-overview">8月19日宇树科技正式科创板挂牌，成为A股人形机器人第一股，收盘总市值超3400亿元；同期WRC展台展示四足机器狗群舞、格斗对抗等群体协同运动能力。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">具身智能龙头上市，资本市场给予高估值；群体协同运动技术成新亮点，量产规模与资本双轮驱动。</span>
                     </div>
                 </div>
@@ -372,7 +396,7 @@ body::after {
                     <h3 class="card-title">界面新闻/经济参考报：智元机器人启动赴港上市</h3>
                     <p class="card-overview">智元创新确认启动赴港上市流程，2025年营收10.5亿元，预计2026年全年收入40亿元。2025年通用人形机器人出货量5168台（全球第一，市占率39%），累计量产下线突破1.5万台。基石投资人目标估值400-500亿港元。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">一A一H双龙头并行，国产机器人赛道进入资本市场定价时刻，出货量不等于商业化成功，工厂稳定作业才是终极考验。</span>
                     </div>
                 </div>
@@ -393,7 +417,7 @@ body::after {
                     <h3 class="card-title">36氪：云深处科创板IPO问询回复细节披露</h3>
                     <p class="card-overview">媒体公开云深处科技科创板问询回复关键对比数据，2025年公司机器狗业务营收2.47亿元，占总营收73.33%，深度扎根B端工业巡检赛道；同期宇树科技机器狗板块营收6.98亿元，兼顾工业与消费级市场，两家国产四足厂商商业化路线差异进一步显现。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">国产四足双雄路线分化：云深处深耕B端工业，宇树工业消费双线并进，商业模式差异决定估值逻辑。</span>
                     </div>
                 </div>
@@ -414,7 +438,7 @@ body::after {
                     <h3 class="card-title">DoNews/Yahoo Finance：普渡机器人D5漂移/D7全球首发亮相WAIC</h3>
                     <p class="card-overview">普渡机器人在WAIC 2026上展示D5四足机器人高速度"漂移"演示（峰值速度5m/s），D7半人形机器人全球线下首发，支持多机协同与行人避障。同期获36Kr"最具投资吸引力AI与具身智能企业"奖，累计融资超3亿美元，估值超15亿美元。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">四足机器人运动能力持续突破，多机协同成为新亮点，商业化布局从服务机器人向具身智能全形态延伸。</span>
                     </div>
                 </div>
@@ -435,7 +459,7 @@ body::after {
                     <h3 class="card-title">和讯网：宇树科技科创板IPO发行安排落定</h3>
                     <p class="card-overview">宇树科技科创板IPO发行价150.80元/股，拟募资约42亿元，网上申购倍数约8288倍，中签率仅0.018%创科创板历史新低。2025年人形机器人出货量超5500台居全球第一，四足机器人占全球市场约69.75%份额。</p>
                     <div class="card-summary">
-                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-tag">解读</span>
                         <span class="summary-text">具身智能产业从技术积累迈向规模化商业化，资本市场高度认可，四足机器人已成全球销量龙头。</span>
                     </div>
                 </div>
@@ -649,6 +673,27 @@ body::after {
             if (window.scrollY > 20) header.classList.add('scrolled');
             else header.classList.remove('scrolled');
         }, { passive: true });
+    }
+    const toggle = document.getElementById('themeToggle');
+    if (toggle) {
+        const stored = localStorage.getItem('jiquan-theme');
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (stored === 'light' || (!stored && prefersLight)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            toggle.textContent = '☀';
+        }
+        toggle.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                document.documentElement.removeAttribute('data-theme');
+                toggle.textContent = '🌙';
+                localStorage.setItem('jiquan-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggle.textContent = '☀';
+                localStorage.setItem('jiquan-theme', 'light');
+            }
+        });
     }
 })();
 </script>

@@ -193,8 +193,8 @@ body::after {
 ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
 .load-more { display: flex; justify-content: center; margin-top: 24px; }
-.load-more-btn { padding: 12px 40px; background: var(--bg2); border: 1px solid var(--rule); color: var(--muted); font-size: 14px; cursor: pointer; border-radius: 8px; transition: all 0.3s ease; font-family: inherit; }
-.load-more-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,240,255,0.05); }
+.load-more-btn { padding: 14px 48px; background: linear-gradient(135deg, rgba(0,240,255,0.1), rgba(168,85,247,0.06)); border: 1px solid rgba(0,240,255,0.25); color: var(--ink); font-size: 15px; font-weight: 600; cursor: pointer; border-radius: 10px; transition: all 0.3s ease; font-family: inherit; letter-spacing: 0.5px; }
+.load-more-btn:hover { border-color: var(--accent); color: var(--accent); background: linear-gradient(135deg, rgba(0,240,255,0.18), rgba(168,85,247,0.12)); box-shadow: 0 4px 20px rgba(0,240,255,0.15); transform: translateY(-2px); }
 .more-info-hint { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 28px; padding: 16px 24px; background: linear-gradient(135deg, rgba(0,240,255,0.06), rgba(168,85,247,0.04)); border: 1px solid rgba(0,240,255,0.15); border-radius: 10px; transition: all 0.3s ease; }
 .more-info-hint:hover { border-color: var(--accent); background: linear-gradient(135deg, rgba(0,240,255,0.12), rgba(168,85,247,0.08)); }
 .more-info-icon { font-size: 18px; }
@@ -1428,23 +1428,41 @@ body::after {
         dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
         autoTimer = setInterval(() => goToSlide(currentSlide + 1), 5000);
 
-        // Touch swipe support for mobile
         const slider = document.querySelector('.featured-slider');
         if (slider) {
-            let touchStartX = 0, touchEndX = 0;
+            let touchStartX = 0, touchStartY = 0, touchEndX = 0, touchEndY = 0, isSwiping = false;
             slider.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+                isSwiping = false;
                 clearInterval(autoTimer);
             }, { passive: true });
+            slider.addEventListener('touchmove', (e) => {
+                const moveX = e.changedTouches[0].screenX;
+                const moveY = e.changedTouches[0].screenY;
+                const diffX = Math.abs(touchStartX - moveX);
+                const diffY = Math.abs(touchStartY - moveY);
+                if (diffX > 10 && diffX > diffY) { isSwiping = true; e.preventDefault(); }
+            }, { passive: false });
             slider.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
+                touchEndY = e.changedTouches[0].screenY;
                 const diff = touchStartX - touchEndX;
                 if (Math.abs(diff) > 40) {
                     if (diff > 0) { goToSlide(currentSlide + 1); }
                     else { goToSlide(currentSlide - 1); }
+                } else if (!isSwiping) {
+                    const url = slides[currentSlide].dataset.url;
+                    if (url) window.open(url, '_blank');
                 }
                 autoTimer = setInterval(() => goToSlide(currentSlide + 1), 5000);
             }, { passive: true });
+            // Desktop click
+            slider.addEventListener('click', (e) => {
+                if (e.target.closest('.slider-btn') || e.target.closest('.slide-dot')) return;
+                const url = slides[currentSlide].dataset.url;
+                if (url) window.open(url, '_blank');
+            });
         }
     })();
     

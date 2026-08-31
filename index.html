@@ -154,7 +154,7 @@ body::after {
 .cat-card:hover { border-color: var(--cat-color, var(--accent)); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
 .cat-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--cat-color, var(--accent)); opacity: 0.6; }
 .cat-icon { font-size: 28px; margin-bottom: 12px; }
-.cat-name { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.cat-name { font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 .cat-desc { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
 .cat-count { font-family: 'BigShoulders', sans-serif; font-size: 22px; font-weight: 700; color: var(--cat-color, var(--accent)); }
 .cat-count .cat-count-unit { font-family: 'JetBrainsMono', monospace; font-size: 11px; font-weight: 400; opacity: 0.7; margin-left: 2px; }
@@ -408,7 +408,7 @@ body::after {
         </div>
         </section>
 
-        <section style="padding: 0 0 24px;">
+        <section id="catSection" style="padding: 0 0 24px;">
             <h2 class="section-title" style="margin-bottom: 20px;">资讯分类</h2>
             <div class="cat-grid"><a href="capital.html" class="cat-card" style="--cat-color: #f59e0b">
         <span class="cat-icon">💰</span>
@@ -419,7 +419,7 @@ body::after {
     <a href="industry.html" class="cat-card" style="--cat-color: #22c55e">
         <span class="cat-icon">⚙️</span>
         <span class="cat-name">工业领域</span>
-        <span class="cat-desc">安防巡检、技术研发、电力矿山、海外市场与行业盛会</span>
+        <span class="cat-desc">安防巡检、电力矿山、仓储物流等工业应用</span>
         <span class="cat-count">51<span class="cat-count-unit"> 条资讯 →</span></span>
     </a>
     <a href="consumer.html" class="cat-card" style="--cat-color: #ec4899">
@@ -762,10 +762,10 @@ body::after {
                 <div class="load-more">
                     <button class="load-more-btn" id="loadMoreBtn">加载更多</button>
                 </div>
-                <div class="more-info-hint">
+                <div class="more-info-hint" onclick="document.getElementById('catSection').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">
                     <span class="more-info-icon">📂</span>
                     <span class="more-info-text">更多资讯请查阅分类板块</span>
-                    <span class="more-info-arrow">→</span>
+                    <span class="more-info-arrow">↑</span>
                 </div>
             </div>
             <aside class="sidebar">

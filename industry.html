@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>工业领域 - 机犬智讯</title>
     <meta name="description" content="聚焦全球机器狗与四足机器人行业动态，实时追踪技术突破、资本动向、产业落地与海外市场">
+    <script>
+        (function() {
+            var stored = localStorage.getItem('jiquan-theme');
+            var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (stored === 'light' || (!stored && prefersLight)) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <style>
 @font-face { font-family: 'InstrumentSans'; src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype'); font-weight: 400; }
 @font-face { font-family: 'InstrumentSans'; src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype'); font-weight: 700; }
@@ -1596,6 +1605,7 @@ body::after {
                 toggle.textContent = '☀';
                 localStorage.setItem('jiquan-theme', 'light');
             }
+            setTimeout(() => location.reload(), 150);
         });
     }
 })();

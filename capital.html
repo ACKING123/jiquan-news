@@ -42,16 +42,21 @@ body::after {
 }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-.site-header { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.88); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--rule); padding: 6px 0; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
 .logo { display: flex; flex-direction: column; text-decoration: none; position: relative; }
-.logo-main { font-family: 'BigShoulders', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
+.logo-main { font-family: 'BigShoulders', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
 .logo-main::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); box-shadow: var(--glow-cyan); }
-.logo-sub { font-family: 'JetBrainsMono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 3px; text-transform: uppercase; margin-top: 2px; }
+.logo-sub { font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 3px; text-transform: uppercase; margin-top: 3px; }
 .main-nav { display: flex; gap: 4px; }
-.nav-item { padding: 8px 14px; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; border-radius: 6px; transition: all 0.3s ease; position: relative; white-space: nowrap; }
+.nav-item { padding: 9px 16px; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; border-radius: 6px; transition: all 0.3s ease; position: relative; white-space: nowrap; }
 .nav-item:hover, .nav-item.active { color: var(--accent); background: rgba(0,240,255,0.08); }
 .nav-item.active::after { content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%); width: 20px; height: 2px; background: var(--accent); box-shadow: var(--glow-cyan); border-radius: 1px; }
+.nav-item.nav-home { font-weight: 800; font-size: 15px; color: var(--ink); }
+.nav-item.nav-home:hover, .nav-item.nav-home.active { color: var(--accent); }
+.nav-item.nav-products { font-weight: 700; color: #eab308; border: 1px solid rgba(234,179,8,0.25); background: rgba(234,179,8,0.06); }
+.nav-item.nav-products:hover, .nav-item.nav-products.active { color: #fbbf24; border-color: rgba(234,179,8,0.5); background: rgba(234,179,8,0.12); }
+.nav-item.nav-products.active::after { background: #eab308; box-shadow: 0 0 12px rgba(234,179,8,0.4); }
 .header-right { display: flex; align-items: center; gap: 16px; }
 .live-indicator { display: flex; align-items: center; gap: 6px; font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--success); }
 .live-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
@@ -205,7 +210,9 @@ body::after {
     .cat-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-    .header-inner { height: 60px; }
+    .header-inner { height: 64px; }
+    .logo-main { font-size: 26px; }
+    .nav-item { font-size: 12px; padding: 6px 10px; }
     .main-nav { display: none; }
     .featured-slider { height: 360px; }
     .slide-title { font-size: 22px; }
@@ -232,11 +239,11 @@ body::after {
                     <span class="logo-sub">JIQUAN NEWS</span>
                 </a>
                 <nav class="main-nav">
-                    <a href="index.html" class="nav-item ">首页</a>
-<a href="capital.html" class="nav-item active">资本</a>
-<a href="industry.html" class="nav-item ">工业</a>
-<a href="consumer.html" class="nav-item ">消费</a>
-<a href="products.html" class="nav-item ">展品</a>
+                    <a href="index.html" class="nav-item  nav-home">首页</a>
+<a href="capital.html" class="nav-item active">资本动态</a>
+<a href="industry.html" class="nav-item ">工业领域</a>
+<a href="consumer.html" class="nav-item ">消费领域</a>
+<a href="products.html" class="nav-item  nav-products">相关产品</a>
 
                 </nav>
                 <div class="header-right">
@@ -498,14 +505,14 @@ body::after {
                         <h4>资讯分类</h4>
                         <ul>
                             <li><a href="capital.html">资本动态</a></li>
-                            <li><a href="industry.html">工业</a></li>
-                            <li><a href="consumer.html">消费民生</a></li>
+                            <li><a href="industry.html">工业领域</a></li>
+                            <li><a href="consumer.html">消费领域</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>更多</h4>
                         <ul>
-                            <li><a href="products.html">WRC展品</a></li>
+                            <li><a href="products.html">相关产品</a></li>
                         </ul>
                     </div>
                 </div>
@@ -564,7 +571,7 @@ body::after {
     var rule = style.getPropertyValue('--rule').trim();
     var bg2 = style.getPropertyValue('--bg2').trim();
     var chart = echarts.init(document.getElementById('catDistChart'), null, { renderer: 'svg' });
-    var catData = [{"name": "\u5de5\u4e1a", "value": 42, "itemStyle": {"color": "#22c55e"}}, {"name": "\u8d44\u672c\u52a8\u6001", "value": 7, "itemStyle": {"color": "#f59e0b"}}, {"name": "\u6d88\u8d39\u6c11\u751f", "value": 5, "itemStyle": {"color": "#ec4899"}}];
+    var catData = [{"name": "\u5de5\u4e1a\u9886\u57df", "value": 42, "itemStyle": {"color": "#22c55e"}}, {"name": "\u8d44\u672c\u52a8\u6001", "value": 7, "itemStyle": {"color": "#f59e0b"}}, {"name": "\u6d88\u8d39\u9886\u57df", "value": 5, "itemStyle": {"color": "#ec4899"}}];
     var catKeys = ["industry", "capital", "consumer"];
     var currentCat = 'capital';
     chart.setOption({

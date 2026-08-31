@@ -67,8 +67,9 @@ body::after {
 .slides-container { position: relative; width: 100%; height: 100%; }
 .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
 .slide.active { opacity: 1; pointer-events: auto; }
-.slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 20% 50%, rgba(0,240,255,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(168,85,247,0.1) 0%, transparent 50%), linear-gradient(135deg, #13131c 0%, #1a1a28 100%); }
-.slide-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(0,240,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.05) 1px, transparent 1px); background-size: 30px 30px; }
+.slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; }
+.slide-bg::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(105deg, rgba(10,10,15,0.92) 0%, rgba(10,10,15,0.78) 45%, rgba(10,10,15,0.55) 100%); }
+.slide-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(0,240,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.04) 1px, transparent 1px); background-size: 30px 30px; z-index: 1; }
 .slide-content { position: relative; z-index: 2; padding: 48px 60px; height: 100%; display: flex; flex-direction: column; justify-content: center; max-width: 70%; }
 .slide-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(0,240,255,0.1); border: 1px solid rgba(0,240,255,0.3); border-radius: 20px; font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 20px; width: fit-content; }
 .slide-title { font-size: 30px; font-weight: 700; line-height: 1.3; margin-bottom: 12px; color: var(--ink); }
@@ -155,7 +156,8 @@ body::after {
 .cat-icon { font-size: 28px; margin-bottom: 12px; }
 .cat-name { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
 .cat-desc { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
-.cat-count { font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--cat-color, var(--accent)); }
+.cat-count { font-family: 'BigShoulders', sans-serif; font-size: 22px; font-weight: 700; color: var(--cat-color, var(--accent)); }
+.cat-count .cat-count-unit { font-family: 'JetBrainsMono', monospace; font-size: 11px; font-weight: 400; opacity: 0.7; margin-left: 2px; }
 
 .product-section { margin-bottom: 40px; }
 .product-section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
@@ -268,11 +270,11 @@ body::after {
         <div class="featured-slider">
             <div class="slides-container">
             <div class="slide active" data-index="0">
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Robotic%20quadruped%20dog%20robot%20in%20industrial%20environment%2C%20futuristic%20dark%20technology%20scene%2C%20Hugging%20Face%20robot%20dog%2C%20cinematic%20lighting%2C%20dark%20background%2C%20news%20photography%20style&image_size=landscape_16_9');"></div>
                 <div class="slide-content">
                     <div class="slide-badge">
                         <span class="badge-icon">⚡</span>
-                        <span class="badge-text">TOP 1 · AI评分 8</span>
+                        <span class="badge-text">最新 · 2026-08-31</span>
                     </div>
                     <h2 class="slide-title">开源机器人Microduck突然爆火！端侧AI受关注 823亿龙头高开秒板</h2>
                     <p class="slide-brand">Hugging Face</p>
@@ -294,11 +296,11 @@ body::after {
                 </div>
             </div>
             <div class="slide " data-index="1">
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Robotic%20quadruped%20dog%20robot%20in%20industrial%20environment%2C%20futuristic%20dark%20technology%20scene%2C%20%E7%8E%84%E6%9C%BA%E5%8A%A8%E5%8A%9B%20robot%20dog%2C%20cinematic%20lighting%2C%20dark%20background%2C%20news%20photography%20style&image_size=landscape_16_9');"></div>
                 <div class="slide-content">
                     <div class="slide-badge">
                         <span class="badge-icon">⚡</span>
-                        <span class="badge-text">TOP 2 · AI评分 7</span>
+                        <span class="badge-text">最新 · 2026-08-31</span>
                     </div>
                     <h2 class="slide-title">2026数博会探索数据要素价值释放新路径</h2>
                     <p class="slide-brand">玄机动力</p>
@@ -320,11 +322,11 @@ body::after {
                 </div>
             </div>
             <div class="slide " data-index="2">
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Robotic%20quadruped%20dog%20robot%20in%20industrial%20environment%2C%20futuristic%20dark%20technology%20scene%2C%20%E7%A6%8F%E5%B7%9E%E5%B8%82%E4%B8%AD%E5%B0%8F%E5%AD%A6%20robot%20dog%2C%20cinematic%20lighting%2C%20dark%20background%2C%20news%20photography%20style&image_size=landscape_16_9');"></div>
                 <div class="slide-content">
                     <div class="slide-badge">
                         <span class="badge-icon">⚡</span>
-                        <span class="badge-text">TOP 3 · AI评分 6</span>
+                        <span class="badge-text">最新 · 2026-08-31</span>
                     </div>
                     <h2 class="slide-title">魔法校园、机器狗、趣味闯关……福州中小学开学仪式感满满！</h2>
                     <p class="slide-brand">福州市中小学</p>
@@ -346,11 +348,11 @@ body::after {
                 </div>
             </div>
             <div class="slide " data-index="3">
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Robotic%20quadruped%20dog%20robot%20in%20industrial%20environment%2C%20futuristic%20dark%20technology%20scene%2C%20%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A%20/%20%E4%B8%AD%E5%9B%BD%E6%95%8F%E5%AE%9E%E9%9B%86%E5%9B%A2%20robot%20dog%2C%20cinematic%20lighting%2C%20dark%20background%2C%20news%20photography%20style&image_size=landscape_16_9');"></div>
                 <div class="slide-content">
                     <div class="slide-badge">
                         <span class="badge-icon">⚡</span>
-                        <span class="badge-text">TOP 4 · AI评分 8</span>
+                        <span class="badge-text">最新 · 2026-08-30</span>
                     </div>
                     <h2 class="slide-title">塞尔维亚首座机器人工厂正式投产，由中塞联合建设</h2>
                     <p class="slide-brand">塞尔维亚 / 中国敏实集团</p>
@@ -372,11 +374,11 @@ body::after {
                 </div>
             </div>
             <div class="slide " data-index="4">
-                <div class="slide-bg"></div>
+                <div class="slide-bg" style="background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Robotic%20quadruped%20dog%20robot%20in%20industrial%20environment%2C%20futuristic%20dark%20technology%20scene%2C%20%E6%B1%9F%E8%A1%8C%E6%99%BA%E8%83%BD%20robot%20dog%2C%20cinematic%20lighting%2C%20dark%20background%2C%20news%20photography%20style&image_size=landscape_16_9');"></div>
                 <div class="slide-content">
                     <div class="slide-badge">
                         <span class="badge-icon">⚡</span>
-                        <span class="badge-text">TOP 5 · AI评分 7</span>
+                        <span class="badge-text">最新 · 2026-08-30</span>
                     </div>
                     <h2 class="slide-title">聚焦2026数博会丨江行智能：物理AI大脑驱动机器狗走进工业现场</h2>
                     <p class="slide-brand">江行智能</p>
@@ -411,25 +413,25 @@ body::after {
         <span class="cat-icon">💰</span>
         <span class="cat-name">资本动态</span>
         <span class="cat-desc">融资、上市、投资与资本运作</span>
-        <span class="cat-count">8 条资讯 →</span>
+        <span class="cat-count">8<span class="cat-count-unit"> 条资讯 →</span></span>
     </a>
     <a href="industry.html" class="cat-card" style="--cat-color: #22c55e">
         <span class="cat-icon">⚙️</span>
         <span class="cat-name">工业领域</span>
         <span class="cat-desc">安防巡检、技术研发、电力矿山、海外市场与行业盛会</span>
-        <span class="cat-count">51 条资讯 →</span>
+        <span class="cat-count">51<span class="cat-count-unit"> 条资讯 →</span></span>
     </a>
     <a href="consumer.html" class="cat-card" style="--cat-color: #ec4899">
         <span class="cat-icon">🏠</span>
         <span class="cat-name">消费领域</span>
         <span class="cat-desc">家庭、导盲、文旅与生活场景应用</span>
-        <span class="cat-count">10 条资讯 →</span>
+        <span class="cat-count">10<span class="cat-count-unit"> 条资讯 →</span></span>
     </a>
     <a href="products.html" class="cat-card" style="--cat-color: #eab308">
     <span class="cat-icon">🏆</span>
     <span class="cat-name">相关产品</span>
     <span class="cat-desc">机器人整机、配件与软件平台产品库</span>
-    <span class="cat-count">129 款产品 →</span>
+    <span class="cat-count">129<span class="cat-count-unit"> 款产品 →</span></span>
 </a>
 </div>
         </section>

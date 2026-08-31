@@ -191,6 +191,10 @@ body::after {
 .product-section-icon { font-size: 24px; }
 .product-section-title { font-family: 'BigShoulders', sans-serif; font-size: 22px; font-weight: 700; }
 .product-section-count { font-family: 'JetBrainsMono', monospace; font-size: 12px; color: var(--muted); margin-left: auto; }
+.subcat-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.subcat-btn { padding: 6px 16px; border: 1px solid var(--rule); background: var(--bg3); color: var(--muted); font-size: 13px; border-radius: 20px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; white-space: nowrap; }
+.subcat-btn:hover { border-color: var(--accent); color: var(--accent); }
+.subcat-btn.active { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #0a0a0f; border-color: transparent; font-weight: 600; }
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
 .product-card { padding: 20px; background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; transition: all 0.3s ease; position: relative; overflow: hidden; }
 .product-card:hover { border-color: rgba(0,240,255,0.3); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
@@ -300,344 +304,345 @@ body::after {
         </div>
 
 
-        <section class="product-section">
+        <section class="product-section" id="quad-section">
             <div class="product-section-header">
                 <span class="product-section-icon">🐕</span>
                 <h2 class="product-section-title">四足机器人</h2>
                 <span class="product-section-count">52 款产品</span>
             </div>
+            <div class="subcat-filter"><button class="subcat-btn active" data-subcat="all">全部</button><button class="subcat-btn" data-subcat="中型轮足">中型轮足 (4)</button><button class="subcat-btn" data-subcat="全功能">全功能 (2)</button><button class="subcat-btn" data-subcat="中型点足/轮足">中型点足/轮足 (1)</button><button class="subcat-btn" data-subcat="小型点足">小型点足 (19)</button><button class="subcat-btn" data-subcat="品牌">品牌 (1)</button><button class="subcat-btn" data-subcat="中型点足">中型点足 (2)</button><button class="subcat-btn" data-subcat="工业级点足">工业级点足 (1)</button><button class="subcat-btn" data-subcat="小型轮足">小型轮足 (9)</button><button class="subcat-btn" data-subcat="双足/四足切换">双足/四足切换 (1)</button><button class="subcat-btn" data-subcat="轮足复合（小型）">轮足复合（小型） (1)</button><button class="subcat-btn" data-subcat="轮足复合">轮足复合 (1)</button><button class="subcat-btn" data-subcat="混动重载点足">混动重载点足 (1)</button><button class="subcat-btn" data-subcat="轻工业点足">轻工业点足 (1)</button><button class="subcat-btn" data-subcat="工业级四足">工业级四足 (1)</button><button class="subcat-btn" data-subcat="中大型点足">中大型点足 (1)</button><button class="subcat-btn" data-subcat="小型轮足（共5款）">小型轮足（共5款） (1)</button><button class="subcat-btn" data-subcat="小型四足">小型四足 (1)</button><button class="subcat-btn" data-subcat="中大型四足">中大型四足 (1)</button><button class="subcat-btn" data-subcat="重载轮足">重载轮足 (1)</button><button class="subcat-btn" data-subcat="大型点足">大型点足 (1)</button><button class="subcat-btn" data-subcat="模块化方案">模块化方案 (1)</button></div>
             <div class="product-grid">
                 
-            <div class="product-card" onclick="window.open('https://www.cnstock.com/commonDetail/767032', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.cnstock.com/commonDetail/767032', '_blank')" style="cursor:pointer;" data-subcat="中型轮足">
                 <div class="product-id">#000</div>
                 <h3 class="product-name">天擎F1（地空协同机器狗）</h3>
                 <p class="product-company">软通动力</p>
                 <p class="product-features">将仿生四足机器人与机载无人机整合为一体化智能作业平台：四足平台可翻越台阶、沟壑与废墟，抵达轮式设备难以进入的复杂地形；机载无人机升空展开高空俯瞰巡检与立体勘测。“高空广域覆盖+地面精细作业”互补成网，实现地面盲区全覆盖、高空探测无死角。</p>
                 <div class="product-tags"><span class="product-tag">中型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1874042131365912437&wfr=spider&for=pc', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1874042131365912437&wfr=spider&for=pc', '_blank')" style="cursor:pointer;" data-subcat="全功能">
                 <div class="product-id">#001</div>
                 <h3 class="product-name">铅球SP1</h3>
                 <p class="product-company">智身科技（北京）有限公司</p>
                 <p class="product-features">具备高防爆能力（Ex IIC T6 Gb），可全地形通过，持续稳定作业。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://baike.baidu.com/item/%E5%90%A0%E4%BA%91/67819129', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://baike.baidu.com/item/%E5%90%A0%E4%BA%91/67819129', '_blank')" style="cursor:pointer;" data-subcat="中型点足/轮足">
                 <div class="product-id">#001</div>
                 <h3 class="product-name">吠云·泰坦</h3>
                 <p class="product-company">玄机动力</p>
                 <p class="product-features">该机器狗最大工作负重达200公斤，可拉动2.55吨车辆，搭载多机械臂可实现毫米级精准操作。</p>
                 <div class="product-tags"><span class="product-tag">中型点足/轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.eeo.com.cn/2026/0821/1006399.shtml', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.eeo.com.cn/2026/0821/1006399.shtml', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#002</div>
                 <h3 class="product-name">防爆四足巡检机器人</h3>
                 <p class="product-company">中信重工机械股份有限公司</p>
                 <p class="product-features">用于II类爆炸环境，可替代人工巡检，降低劳动强度和安全隐患。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1875002164338341825', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1875002164338341825', '_blank')" style="cursor:pointer;" data-subcat="中型轮足">
                 <div class="product-id">#003</div>
                 <h3 class="product-name">灵巡C1U</h3>
                 <p class="product-company">江行智能</p>
                 <p class="product-features">“物理AI大脑”驱动的两款机器狗新品之一，核心解决工业场景中“走进现场”的问题。</p>
                 <div class="product-tags"><span class="product-tag">中型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://it.gmw.cn/2026-08/20/content_38954626.htm', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://it.gmw.cn/2026-08/20/content_38954626.htm', '_blank')" style="cursor:pointer;" data-subcat="全功能">
                 <div class="product-id">#003</div>
                 <h3 class="product-name">高德动量机器狗途途</h3>
                 <p class="product-company">北京高德动量科技有限公司</p>
                 <p class="product-features">全球首款在非结构化开放环境中自主作业的四足机器狗，无需预设路线。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.roboatlas.ai/zh-CN/products/xr-01', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.roboatlas.ai/zh-CN/products/xr-01', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#004</div>
                 <h3 class="product-name">XR-01</h3>
                 <p class="product-company">北京理工华汇智能科技有限公司</p>
                 <p class="product-features">面向高海拔内陆环境，核心部件IP67防护，适应-40℃至+50℃环境。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1875002164338341825', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1875002164338341825', '_blank')" style="cursor:pointer;" data-subcat="中型轮足">
                 <div class="product-id">#004</div>
                 <h3 class="product-name">擎巡X1U</h3>
                 <p class="product-company">江行智能</p>
                 <p class="product-features">“物理AI大脑”驱动，搭载机械臂实现“检测到处置”的全链路操作。</p>
                 <div class="product-tags"><span class="product-tag">中型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.36kr.com/p/3417849334156930', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.36kr.com/p/3417849334156930', '_blank')" style="cursor:pointer;" data-subcat="品牌">
                 <div class="product-id">#005</div>
                 <h3 class="product-name">京东joyinside品牌</h3>
                 <p class="product-company">北京京东世纪贸易有限公司（京东集团）</p>
                 <p class="product-features">京东携手宇树科技、智元、天工、众擎、星海图、逐际动力、千寻、松延动力等顶尖机器人品牌亮相，并发布“智能机器人产业加速计划”：将在智能机器人领域投入超百亿资源，三年内助力100个智能机器人品牌销售破10亿、带领智能机器人走进超百万个终端场景。</p>
                 <div class="product-tags"><span class="product-tag">品牌</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://easternherald.com/2026/08/29/ice-boston-dynamics-robot-dogs-procurement-dhs-2026/', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://easternherald.com/2026/08/29/ice-boston-dynamics-robot-dogs-procurement-dhs-2026/', '_blank')" style="cursor:pointer;" data-subcat="中型点足">
                 <div class="product-id">#005</div>
                 <h3 class="product-name">Spot</h3>
                 <p class="product-company">波士顿动力</p>
                 <p class="product-features">主要用于危险环境、地下隧道或边境复杂地形的先期检查与安全评估。</p>
                 <div class="product-tags"><span class="product-tag">中型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.hunantoday.cn/news/xhn/202608/33587140.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.hunantoday.cn/news/xhn/202608/33587140.html', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#006</div>
                 <h3 class="product-name">ABT-50</h3>
                 <p class="product-company">湖南艾博特机器人技术有限公司</p>
                 <p class="product-features">重载机器狗，最大载重50公斤，可攀爬30度陡坡、穿越泥泞地形。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.10jqka.com.cn/20260820/c679112366.shtml', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.10jqka.com.cn/20260820/c679112366.shtml', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#006</div>
                 <h3 class="product-name">小远（智能导盲犬）</h3>
                 <p class="product-company">杭州远山智行科技有限公司</p>
                 <p class="product-features">面向视障人群的轮足式导盲机器人，填补国内专业导盲机器人市场空白，室内避障成功率不低于99%，室外避障成功率不低于96%，已与浙江省残联、内蒙古残联等达成战略合作。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://yuanchuang.10jqka.com.cn/20260825/c679269640.shtml', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://yuanchuang.10jqka.com.cn/20260825/c679269640.shtml', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#007</div>
                 <h3 class="product-name">灵卫四足机器狗</h3>
                 <p class="product-company">招商积余</p>
                 <p class="product-features">已实现与招商π智慧服务平台联动，可识别现场异常并自动派发工单，形成处置-复检关单的业务闭环。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/b2', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/b2', '_blank')" style="cursor:pointer;" data-subcat="工业级点足">
                 <div class="product-id">#007</div>
                 <h3 class="product-name">B2</h3>
                 <p class="product-company">宇树科技股份有限公司</p>
                 <p class="product-features">面向工业场景的高性能工业级四足机器人，以6m/s的奔跑速度、大于40kg的持续行走负载和超5小时的长续航能力著称</p>
                 <div class="product-tags"><span class="product-tag">工业级点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/A2-W', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/A2-W', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#008</div>
                 <h3 class="product-name">A2 / A2-W</h3>
                 <p class="product-company">宇树科技股份有限公司</p>
                 <p class="product-features">A2是一款更轻、更快的行业级四足机器人，重约37kg，奔跑速度5m/s；A2-W则是其轮足复合形态的变体，结合了轮式的速度与足式的越障能力</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://bnrnews.bg/en/post/518483/customs-dog-and-robot-dog-have-exclusive-meeting-at-teen-boom-fest26-in-burgas', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://bnrnews.bg/en/post/518483/customs-dog-and-robot-dog-have-exclusive-meeting-at-teen-boom-fest26-in-burgas', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#008</div>
                 <h3 class="product-name">Rashko</h3>
                 <p class="product-company">挪威制造</p>
                 <p class="product-features">海关互动展示巡检机器狗，日行20km/负重10kg。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/go2', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/go2', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#009</div>
                 <h3 class="product-name">Go2</h3>
                 <p class="product-company">宇树科技股份有限公司</p>
                 <p class="product-features">消费级旗舰四足机器人，起售价9997元，是全球首款搭载4D超广角激光雷达的伴随仿生机器人，具备5m/s的奔跑速度和AI大模型赋能的丰富动作</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.hexun.com/2026-08-21/224863668.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.hexun.com/2026-08-21/224863668.html', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#010</div>
                 <h3 class="product-name">D15</h3>
                 <p class="product-company">中联重科/中科云谷</p>
                 <p class="product-features">中联重科旗下首发的多形态完备产品谱系中的四足机器狗型号。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/As2-W', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.unitree.com/cn/As2-W', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#010</div>
                 <h3 class="product-name">As2 / As2-W</h3>
                 <p class="product-company">宇树科技股份有限公司</p>
                 <p class="product-features">As2是一款轻量化的行业级四足机器人，自重仅18kg，动力性能约为Go2的两倍；As2-W则是其轮足复合形态的变体，空载续航超30km，最高速度6m/s。</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://m2.dzplus.dzng.com/share/general/0/NEWS3621655HQSWPHNOQMKZL', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://m2.dzplus.dzng.com/share/general/0/NEWS3621655HQSWPHNOQMKZL', '_blank')" style="cursor:pointer;" data-subcat="双足/四足切换">
                 <div class="product-id">#011</div>
                 <h3 class="product-name">载人机甲GD01</h3>
                 <p class="product-company">宇树科技股份有限公司</p>
                 <p class="product-features">2.8秒完成双足人形与四足机器狗形态无缝切换</p>
                 <div class="product-tags"><span class="product-tag">双足/四足切换</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.hexun.com/2026-08-21/224863668.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.hexun.com/2026-08-21/224863668.html', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#011</div>
                 <h3 class="product-name">D40</h3>
                 <p class="product-company">中联重科/中科云谷</p>
                 <p class="product-features">中联重科旗下首发的多形态完备产品谱系中的四足机器狗型号。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.mi.com/cyberdog2', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.mi.com/cyberdog2', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#012</div>
                 <h3 class="product-name">CyberDog 2</h3>
                 <p class="product-company">小米</p>
                 <p class="product-features">CyberDog 2的产品定位为“小型犬”，整机重量为8.9kg，高度36.7cm。对比上一代产品，重量减轻了40%，尺寸相比上一代产品减小了16%，重量和大小更加接近真实的犬只。CyberDog 2搭载了小米自研的CyberGear微电机以及自研的算法，以实现强大的运动能力且保障了动作的精细度。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.pconline.com.cn/zhizao/2180/21806161.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.pconline.com.cn/zhizao/2180/21806161.html', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#012</div>
                 <h3 class="product-name">绝影X30</h3>
                 <p class="product-company">云深处科技股份有限公司</p>
                 <p class="product-features">经戈壁滩、核电站等极端工况实战验证，宁夏戈壁识别准确率96.5%</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.pconline.com.cn/zhizao/2180/21806161.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.pconline.com.cn/zhizao/2180/21806161.html', '_blank')" style="cursor:pointer;" data-subcat="轮足复合（小型）">
                 <div class="product-id">#013</div>
                 <h3 class="product-name">山猫S10</h3>
                 <p class="product-company">云深处科技股份有限公司</p>
                 <p class="product-features">≤20kg，平地极限速度8m/s，越障50cm，IP66，-20℃~55℃</p>
                 <div class="product-tags"><span class="product-tag">轮足复合（小型）</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://cloud.tencent.com/developer/article/2189822', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://cloud.tencent.com/developer/article/2189822', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#013</div>
                 <h3 class="product-name">Max 2</h3>
                 <p class="product-company">腾讯</p>
                 <p class="product-features">依托于机器人视觉定位、地形识别、全向六自由度运动规划、高精度模型预测控制等技术，Max能够识别复杂地形，并实时规划步伐，避免踩歪、打滑、摔倒等风险。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.pconline.com.cn/zhizao/2180/21806161.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.pconline.com.cn/zhizao/2180/21806161.html', '_blank')" style="cursor:pointer;" data-subcat="轮足复合">
                 <div class="product-id">#014</div>
                 <h3 class="product-name">山猫M20S</h3>
                 <p class="product-company">云深处科技股份有限公司</p>
                 <p class="product-features">35kg有效负载，可跳上80cm高台，IP67，9m/s最大工作速度</p>
                 <div class="product-tags"><span class="product-tag">轮足复合</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://m.haiwainet.cn/middle/3545083/2026/0820/content_32976934_1.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://m.haiwainet.cn/middle/3545083/2026/0820/content_32976934_1.html', '_blank')" style="cursor:pointer;" data-subcat="混动重载点足">
                 <div class="product-id">#015</div>
                 <h3 class="product-name">机械麒麟系列</h3>
                 <p class="product-company">上海开普勒机器人有限公司</p>
                 <p class="product-features">全球首款混动架构重载四足机器人，自研行星滚柱丝杠，整机满载近吨级</p>
                 <div class="product-tags"><span class="product-tag">混动重载点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.pudutech.com/zh-CN/products/d5', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.pudutech.com/zh-CN/products/d5', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#016</div>
                 <h3 class="product-name">D5</h3>
                 <p class="product-company">普渡机器人</p>
                 <p class="product-features">具备高速度"漂移"能力（峰值速度5m/s），IP67防护+宽温范围，适应安防及巡逻需求。</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.yemacaijing.com/Index/view/id/95523.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.yemacaijing.com/Index/view/id/95523.html', '_blank')" style="cursor:pointer;" data-subcat="轻工业点足">
                 <div class="product-id">#016</div>
                 <h3 class="product-name">MagicDog T1</h3>
                 <p class="product-company">魔法原子机器人科技（无锡）有限公司</p>
                 <p class="product-features">整机18kg起，负载15kg，轻量化模块化设计，可搭载机械臂与传感设备</p>
                 <div class="product-tags"><span class="product-tag">轻工业点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://m.sohu.com/a/1064268876_223764?scm=10008.1475_13-1475_13-11_11.0-0.0-1-0-0-0.0&spm=smwp.content.fd-d.28.17870692588545NeCRDS&_trans_=000014_baidu_zt_3381', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://m.sohu.com/a/1064268876_223764?scm=10008.1475_13-1475_13-11_11.0-0.0-1-0-0-0.0&spm=smwp.content.fd-d.28.17870692588545NeCRDS&_trans_=000014_baidu_zt_3381', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#017</div>
                 <h3 class="product-name">MagicDog-W</h3>
                 <p class="product-company">魔法原子机器人科技（无锡）有限公司</p>
                 <p class="product-features">已落地无锡公安“人形+四足”警务协同体系</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://finance-app.people.cn/n1/2026/0723/c1004-40766663.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://finance-app.people.cn/n1/2026/0723/c1004-40766663.html', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#017</div>
                 <h3 class="product-name">灵睿P1</h3>
                 <p class="product-company">中坚科技（桦之坚）</p>
                 <p class="product-features">核心部件全链路自研，具备IP67防护能力，背靠百万级自动化产线可支撑规模化交付。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.pingwest.com/w/316604', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.pingwest.com/w/316604', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#018</div>
                 <h3 class="product-name">智身钢镚 L2</h3>
                 <p class="product-company">智身科技（北京）有限公司</p>
                 <p class="product-features">7:1极限负载自重比，16kg持续背负、150kg静态承载</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.pingwest.com/w/316604', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.pingwest.com/w/316604', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#019</div>
                 <h3 class="product-name">行业上装机器狗（5款）</h3>
                 <p class="product-company">智身科技（北京）有限公司</p>
                 <p class="product-features">覆盖排爆、消杀、电力巡检、安防巡检、导盲、防爆等场景</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.shaoxing.com.cn/p/3457241.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.shaoxing.com.cn/p/3457241.html', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#020</div>
                 <h3 class="product-name">D1 Max</h3>
                 <p class="product-company">智元创新</p>
                 <p class="product-features">化工厂房持证上岗巡检四足机器人，精准识别氯气、氢气泄漏并自动报警，任务完成率92.5%-95%。</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.pconline.com.cn/2180/21806260.html#ad=6635', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.pconline.com.cn/2180/21806260.html#ad=6635', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#020</div>
                 <h3 class="product-name">灵猫 Cyvet</h3>
                 <p class="product-company">宇泛智能科技股份有限公司</p>
                 <p class="product-features">全栈自研，15kg机身扛20kg负载，全球首个720°连续后空翻；背越式跳高1米、立定跳远2米；负重状态可持续行走3小时</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('http://www.luotiannews.com/p/130430.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('http://www.luotiannews.com/p/130430.html', '_blank')" style="cursor:pointer;" data-subcat="工业级四足">
                 <div class="product-id">#021</div>
                 <h3 class="product-name">D2-W</h3>
                 <p class="product-company">武汉格蓝若智能技术股份有限公司</p>
                 <p class="product-features">大会首发，已在光谷创新天地物业“上岗”园区巡逻；搭载自研“玄鸟”巡检智脑，具备自主导航、复杂地形通行、长续航能力</p>
                 <div class="product-tags"><span class="product-tag">工业级四足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.jinantimes.com.cn/news-39-5303233.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.jinantimes.com.cn/news-39-5303233.html', '_blank')" style="cursor:pointer;" data-subcat="中大型点足">
                 <div class="product-id">#021</div>
                 <h3 class="product-name">60公斤级智能巡检机器狗</h3>
                 <p class="product-company">山钢集团（山信软件·莱钢电子）</p>
                 <p class="product-features">在高炉风口平台投入使用，适应-20℃至55℃极端环境，测温误差控制在±0.5℃以内。</p>
                 <div class="product-tags"><span class="product-tag">中大型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('http://www.luotiannews.com/p/130430.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('http://www.luotiannews.com/p/130430.html', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#022</div>
                 <h3 class="product-name">赤兔</h3>
                 <p class="product-company">武汉格蓝若智能技术股份有限公司</p>
                 <p class="product-features">峰值负载超120公斤，可投用于安全巡逻、灾害救援等场景中。该机器人还适用于巡检安防、应急救援等领域，如地震、洪涝灾害、危化品泄漏现场，能进入废墟和狭窄空间评估结构稳定性、寻找生命迹象。</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.qq.com/rain/a/20260820A0C7YD00?id=20260820A0C7YD00&path=a&app=news&suid=&redirect_pc=1', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.qq.com/rain/a/20260820A0C7YD00?id=20260820A0C7YD00&path=a&app=news&suid=&redirect_pc=1', '_blank')" style="cursor:pointer;" data-subcat="小型轮足（共5款）">
                 <div class="product-id">#023</div>
                 <h3 class="product-name">掌安星</h3>
                 <p class="product-company">杰创智能科技股份有限公司</p>
                 <p class="product-features">内置230余种识别算法，可完成巡逻-识别-预警-网捕全链条作业；配套统一指挥管控平台，支持多机集群协同</p>
                 <div class="product-tags"><span class="product-tag">小型轮足（共5款）</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://gdio.southcn.com/node_5201f00af5/3766bfc4da.shtml', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://gdio.southcn.com/node_5201f00af5/3766bfc4da.shtml', '_blank')" style="cursor:pointer;" data-subcat="小型四足">
                 <div class="product-id">#024</div>
                 <h3 class="product-name">YJ30</h3>
                 <p class="product-company">越甲灵动（深圳）科技有限公司</p>
                 <p class="product-features">提供四足式、四轮足式两种形态</p>
                 <div class="product-tags"><span class="product-tag">小型四足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://gdio.southcn.com/node_5201f00af5/3766bfc4da.shtml', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://gdio.southcn.com/node_5201f00af5/3766bfc4da.shtml', '_blank')" style="cursor:pointer;" data-subcat="中大型四足">
                 <div class="product-id">#025</div>
                 <h3 class="product-name">YJ30 Max</h3>
                 <p class="product-company">越甲灵动（深圳）科技有限公司</p>
                 <p class="product-features">提供四足式、四轮足式两种形态</p>
                 <div class="product-tags"><span class="product-tag">中大型四足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://site.baoanone.com/content220995.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://site.baoanone.com/content220995.html', '_blank')" style="cursor:pointer;" data-subcat="重载轮足">
                 <div class="product-id">#026</div>
                 <h3 class="product-name">Hypertron-T01</h3>
                 <p class="product-company">深圳璇玑动力科技有限公司</p>
                 <p class="product-features">搭载双光云台、气体传感、消防水炮等上装模块</p>
                 <div class="product-tags"><span class="product-tag">重载轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://site.baoanone.com/content220995.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://site.baoanone.com/content220995.html', '_blank')" style="cursor:pointer;" data-subcat="中型轮足">
                 <div class="product-id">#027</div>
                 <h3 class="product-name">Hypertron-SW01</h3>
                 <p class="product-company">深圳璇玑动力科技有限公司</p>
                 <p class="product-features">已在电力能源、应急消防、智慧园区常态化落地；现场演示自主建图、路径规划、避障、定点作业及自动回充能力</p>
                 <div class="product-tags"><span class="product-tag">中型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.dayoo.com/finance/202608/19/171077_54992670.htm', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.dayoo.com/finance/202608/19/171077_54992670.htm', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#028</div>
                 <h3 class="product-name">X7</h3>
                 <p class="product-company">广州视源电子科技股份有限公司（MAXHUB视源股份）</p>
                 <p class="product-features">工业级四足机器人；将电力巡检从“只看不动”升级为“巡操一体”</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.qq.com/rain/a/20260820A0EYOX00', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.qq.com/rain/a/20260820A0EYOX00', '_blank')" style="cursor:pointer;" data-subcat="中型点足">
                 <div class="product-id">#029</div>
                 <h3 class="product-name">吠云</h3>
                 <p class="product-company">中国南方电网有限责任公司</p>
                 <p class="product-features">电力巡检四足机器狗，已在广东东莞18个无人变电站作业</p>
                 <div class="product-tags"><span class="product-tag">中型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://finance.sina.com.cn/tech/roll/2026-08-20/doc-ininxvfu2019236.shtml', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://finance.sina.com.cn/tech/roll/2026-08-20/doc-ininxvfu2019236.shtml', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#030</div>
                 <h3 class="product-name">BabyAlpha A3</h3>
                 <p class="product-company">南京蔚蓝智能科技有限公司</p>
                 <p class="product-features">家庭陪伴机器狗</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1874043872101138388&wfr=spider&for=pc', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://baijiahao.baidu.com/s?id=1874043872101138388&wfr=spider&for=pc', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#031</div>
                 <h3 class="product-name">巡1/巡3</h3>
                 <p class="product-company">诚芯智联（武汉）科技技术有限公司</p>
                 <p class="product-features">治安/工业巡检机器狗，车规级融合感知+自研DC200域控制器</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://finance.sina.cn/2026-07-20/detail-iniimzhe8176265.d.html?vt=4', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://finance.sina.cn/2026-07-20/detail-iniimzhe8176265.d.html?vt=4', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#032</div>
                 <h3 class="product-name">天狼Q10W</h3>
                 <p class="product-company">中国兵器自动化所（中国兵器工业集团有限公司）</p>
@@ -646,7 +651,7 @@ body::after {
 整机采用轻量化、全模块化快拆快装设计，单人即可快速独立完成转运、布...</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://finance.sina.cn/2026-07-20/detail-iniimzhe8176265.d.html?vt=4', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://finance.sina.cn/2026-07-20/detail-iniimzhe8176265.d.html?vt=4', '_blank')" style="cursor:pointer;" data-subcat="小型轮足">
                 <div class="product-id">#033</div>
                 <h3 class="product-name">天狼Q5</h3>
                 <p class="product-company">中国兵器自动化所（中国兵器工业集团有限公司）</p>
@@ -654,21 +659,21 @@ body::after {
 具备边缘计算与云端能力协同架构，基础AI能力出厂可用，并支持云端OTA持续升级，拥有自主巡逻、自主回充、人员跟随、远程广播喊话、双向语音对讲、视频采集、AI识别、后台...</p>
                 <div class="product-tags"><span class="product-tag">小型轮足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://news.qq.com/rain/a/20260820A058TK00', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://news.qq.com/rain/a/20260820A058TK00', '_blank')" style="cursor:pointer;" data-subcat="小型点足">
                 <div class="product-id">#034</div>
                 <h3 class="product-name">大头 EDU-W 轮足版</h3>
                 <p class="product-company">维他动力（北京）科技有限公司</p>
                 <p class="product-features">以地瓜机器人研发的旭日S100P智能计算芯片为核心，通过端侧AI算力与中央计算系统的深度协同，为家庭、零售、公共及办公场景提供高实时性的算力支撑</p>
                 <div class="product-tags"><span class="product-tag">小型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://auto.sina.cn/2026-08-19/detail-ininwiei6932726.d.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://auto.sina.cn/2026-08-19/detail-ininwiei6932726.d.html', '_blank')" style="cursor:pointer;" data-subcat="大型点足">
                 <div class="product-id">#035</div>
                 <h3 class="product-name">骐骥X1</h3>
                 <p class="product-company">大咖机器人（北京）有限公司</p>
                 <p class="product-features">全地形智能坐骑-点足机器马，纯四足仿生结构</p>
                 <div class="product-tags"><span class="product-tag">大型点足</span><span class="product-tag" style="color:var(--accent);border-color:rgba(0,240,255,0.3);">🔗 可点击查看详情</span></div>
             </div>
-            <div class="product-card" onclick="window.open('https://www.chinaagv.com/news/detail/202508/33787.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.chinaagv.com/news/detail/202508/33787.html', '_blank')" style="cursor:pointer;" data-subcat="模块化方案">
                 <div class="product-id">#036</div>
                 <h3 class="product-name">/</h3>
                 <p class="product-company">上海仙工智能科技股份有限公司</p>
@@ -685,184 +690,185 @@ body::after {
                 <h2 class="product-section-title">人形机器人</h2>
                 <span class="product-section-count">26 款产品</span>
             </div>
+            
             <div class="product-grid">
                 
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#037</div>
                 <h3 class="product-name">全尺寸交互人形机器人LimX Luna</h3>
                 <p class="product-company">深圳逐际动力科技股份有限公司</p>
                 <p class="product-features">高动态拟人本体，支持语音大模型对话、手势识别，可多机协同表演。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#038</div>
                 <h3 class="product-name">MagicBot X1</h3>
                 <p class="product-company">魔法原子机器人科技（无锡）有限公司</p>
                 <p class="product-features">高机动、高负载，支持7×24小时持续作业，开放开发接口，适配多元场景。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#039</div>
                 <h3 class="product-name">Vbot人形机器人</h3>
                 <p class="product-company">维他动力（北京）科技有限公司</p>
                 <p class="product-features">融合多模态交互与自主移动能力，可完成家庭任务，外观设计亲和。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#040</div>
                 <h3 class="product-name">天工Omni</h3>
                 <p class="product-company">北京人形机器人创新中心有限公司</p>
                 <p class="product-features">算力强劲，全栈开放易开发，满足CE CR认证，多模态感知，高稳可靠。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#041</div>
                 <h3 class="product-name">Kengo</h3>
                 <p class="product-company">星海图（北京）人工智能科技股份有限公司</p>
                 <p class="product-features">1.4m黄金身高，高动态性能，轻量化机身，高可靠性设计，商用场景安心。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#042</div>
                 <h3 class="product-name">Booster T2</h3>
                 <p class="product-company">北京加速进化科技有限公司</p>
                 <p class="product-features">具身开发旗舰平台，拥有顶级算力，能理解世界并做出自然回应。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#043</div>
                 <h3 class="product-name">小朴Simbot</h3>
                 <p class="product-company">北京深朴智能科技有限公司</p>
                 <p class="product-features">搭载全新大脑架构，面向泛家庭任务定制，支持多模态感知交互。</p>
                 <div class="product-tags"><span class="product-tag">家庭</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#045</div>
                 <h3 class="product-name">RealBOT S2</h3>
                 <p class="product-company">睿尔曼智能科技（北京）股份有限公司</p>
                 <p class="product-features">能蹲下、钻窄巷，适配密集产线，全角度感知无死角。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#048</div>
                 <h3 class="product-name">复合机器人天艺系列</h3>
                 <p class="product-company">四川天链机器人股份有限公司</p>
                 <p class="product-features">集成移动与协作机器人于一体，轻巧灵活，双臂可独立或协同作业。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#051</div>
                 <h3 class="product-name">TutorC</h3>
                 <p class="product-company">深圳市优必选科技股份有限公司</p>
                 <p class="product-features">面向学校的助教机器人，辅助老师完成讲解、演示、互动、记录等工作。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#052</div>
                 <h3 class="product-name">高德动量人形机器人</h3>
                 <p class="product-company">北京高德动量科技有限公司</p>
                 <p class="product-features">依托自研ABot技术，具备毫米级感知与厘米级操作精度，支持多场景一键部署。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#053</div>
                 <h3 class="product-name">AI Sapiens</h3>
                 <p class="product-company">로보티즈（乐博益思）</p>
                 <p class="product-features">全栈完全开源，实机导向开发体系，全身一体化工作流，降低研发成本。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#054</div>
                 <h3 class="product-name">Astribot T1</h3>
                 <p class="product-company">星尘智能（深圳）人工智能科技股份有限公司</p>
                 <p class="product-features">高动态、高精度、强负载与高柔顺，支持电池快换和自动回充，二次开发灵活。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#056</div>
                 <h3 class="product-name">ROBOTO 01（RP1）</h3>
                 <p class="product-company">上海萝博派对科技有限公司</p>
                 <p class="product-features">面向开发者、科研与教育的开源人形机器人平台，模块化设计，高动态运动。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#071</div>
                 <h3 class="product-name">基于蚂蚁灵波跨本体具身大模型的零售药房分拣展示方案</h3>
                 <p class="product-company">上海蚂蚁灵波科技有限公司</p>
                 <p class="product-features">以“通用大脑”驱动不同品牌、不同构型的机器人，协同完成订单接收、智能分拣和商品交付的全流程闭环。该方案已在国大药房上海门店落地。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#093</div>
                 <h3 class="product-name">单臂协作机器人</h3>
                 <p class="product-company">北京云迹科技股份有限公司</p>
                 <p class="product-features">面向商用服务场景，主打全域无人化、低成本部署、全场景拓展。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#094</div>
                 <h3 class="product-name">云迹小马机器人</h3>
                 <p class="product-company">北京云迹科技股份有限公司</p>
                 <p class="product-features">智能亲子娱乐AI互动体验，创造全新营收模式。</p>
                 <div class="product-tags"><span class="product-tag">家庭</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#105</div>
                 <h3 class="product-name">心言家庭陪伴机器人</h3>
                 <p class="product-company">北京心言机器人科技有限公司</p>
                 <p class="product-features">自主移动，家庭陪伴。</p>
                 <div class="product-tags"><span class="product-tag">家庭</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#106</div>
                 <h3 class="product-name">AIYA数字生命伙伴</h3>
                 <p class="product-company">北京瑞宏具身智能机器人科技有限公司</p>
                 <p class="product-features">可成长数字生命体系，毛绒仿生外观，多模态交互，依托自研大模型感知情绪。</p>
                 <div class="product-tags"><span class="product-tag">家庭</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#107</div>
                 <h3 class="product-name">消费级家庭智能体Donut</h3>
                 <p class="product-company">北京盈迪曼德科技有限公司</p>
                 <p class="product-features">搭载自研ROBOMIND具身大脑，纯视觉空间感知，具备主动交互与情绪感知能力。</p>
                 <div class="product-tags"><span class="product-tag">家庭</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#109</div>
                 <h3 class="product-name">无际导览机器人</h3>
                 <p class="product-company">杭州市余杭区海创人形机器人产业创新中心</p>
                 <p class="product-features">自研“无际大脑”，低时延语音交互，人形双足本体，可联控展厅设备。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#110</div>
                 <h3 class="product-name">人形机器人全身协同作业</h3>
                 <p class="product-company">北京通用人工智能研究院</p>
                 <p class="product-features">主打家居场景全身协同作业，可连贯完成多姿态动作，自主实现收纳、取物等。</p>
                 <div class="product-tags"><span class="product-tag">家庭</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#111</div>
                 <h3 class="product-name">Aitu 缝纫机器人 + 模板机协同作业</h3>
                 <p class="product-company">浙江艾图具身智能科技有限公司</p>
                 <p class="product-features">搭载服装垂域VLA大模型，首创缝纫机器人+模板机一体化联动系统。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#112</div>
                 <h3 class="product-name">MORPHI KINO</h3>
                 <p class="product-company">深圳墨奇智能技术有限公司</p>
                 <p class="product-features">信息未提供。</p>
                 <div class="product-tags"><span class="product-tag">家庭</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#113</div>
                 <h3 class="product-name">中科慧灵机器人乐队CASBOT BAND</h3>
                 <p class="product-company">北京中科慧灵机器人技术有限公司</p>
                 <p class="product-features">机器人乐队与真人歌手协同完成舞台表演。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#114</div>
                 <h3 class="product-name">基于蚂蚁灵波跨本体具身大模型的物流分拣展示方案</h3>
                 <p class="product-company">上海蚂蚁灵波科技有限公司</p>
@@ -879,100 +885,101 @@ body::after {
                 <h2 class="product-section-title">行业应用机器人</h2>
                 <span class="product-section-count">14 款产品</span>
             </div>
+            
             <div class="product-grid">
                 
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#050</div>
                 <h3 class="product-name">电力轨道式巡检机器人</h3>
                 <p class="product-company">中信重工机械股份有限公司</p>
                 <p class="product-features">用于室内电力场景，支持24小时不间断巡检，精准预判隐蔽故障。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#087</div>
                 <h3 class="product-name">锅炉水冷壁检测机器人</h3>
                 <p class="product-company">北京中安吉泰科技有限公司</p>
                 <p class="product-features">在高空高危场景下吸附于垂壁，替代人工，缩短检修时间。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="全功能">
                 <div class="product-id">#088</div>
                 <h3 class="product-name">桌面具身独轮机器人RIG-Hover</h3>
                 <p class="product-company">无锡陆吾智能科技有限公司</p>
                 <p class="product-features">极窄双轮自平衡结构，头身解耦设计，支持多模态交互，适合二次开发。</p>
                 <div class="product-tags"><span class="product-tag">全功能</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#089</div>
                 <h3 class="product-name">智能助餐机器人</h3>
                 <p class="product-company">杭州市余杭区海创人形机器人产业创新中心</p>
                 <p class="product-features">自动识别食物并送餐，实时跟随用户口部位置，支持多种控制方式，安全机制完善。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#090</div>
                 <h3 class="product-name">敏捷移动平台（机器人）</h3>
                 <p class="product-company">杭州市余杭区海创人形机器人产业创新中心</p>
                 <p class="product-features">仿生式大行程高速多轮足移动平台，集轮式高速与足式越障于一体。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#091</div>
                 <h3 class="product-name">水陆两栖超轻型履带UGV</h3>
                 <p class="product-company">极创机器人智能科技（山东）有限公司</p>
                 <p class="product-features">使用轻质蹼型履带同时提供浮力和驱动力，无需额外浮块和水下推进系统。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#092</div>
                 <h3 class="product-name">MINI款安诺AI机器人圣代冰淇淋亭</h3>
                 <p class="product-company">安诺机器人（深圳）有限公司</p>
                 <p class="product-features">20-40秒快速出杯，机械臂自动化制作，支持24小时无人值守。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#097</div>
                 <h3 class="product-name">缆索修补机器人</h3>
                 <p class="product-company">深圳市人工智能与机器人研究院</p>
                 <p class="product-features">全球首次在百米高空修复斜拉索护套，首创“地面操控、云端施工”模式。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#100</div>
                 <h3 class="product-name">机场智能驱鸟机器人</h3>
                 <p class="product-company">杭州申昊科技股份有限公司</p>
                 <p class="product-features">履带式差速驱动，适应复杂地形，持久续航，全天候全地形作业。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#101</div>
                 <h3 class="product-name">HighMate CP10-W 球罐复合打磨机器人</h3>
                 <p class="product-company">浙江史河科技有限公司</p>
                 <p class="product-features">强力打磨，自主作业，差速驱动，布置简单，安全系数高。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#102</div>
                 <h3 class="product-name">速攻灭火机器人</h3>
                 <p class="product-company">中信重工机械股份有限公司</p>
                 <p class="product-features">用于复杂场景灭火救援，集强机动、高效灭火、智能自主作业于一体。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#103</div>
                 <h3 class="product-name">晓蚁行李转运机器人</h3>
                 <p class="product-company">厦门瑞为信息技术股份有限公司</p>
                 <p class="product-features">集成复合末端执行器，自主规划码放，支持7×24小时运行，融合人体动态识别。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="专业领域">
                 <div class="product-id">#104</div>
                 <h3 class="product-name">智越轮椅机器人Magic TC1</h3>
                 <p class="product-company">深圳美丽魔方机器人有限公司</p>
                 <p class="product-features">全地形“行走自由”，履带爬楼/坡，多自由度机械臂，自主规划导航。</p>
                 <div class="product-tags"><span class="product-tag">专业领域</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="家庭">
                 <div class="product-id">#108</div>
                 <h3 class="product-name">CyboPal ONE</h3>
                 <p class="product-company">江苏细胞壁智能科技有限公司</p>
@@ -989,58 +996,59 @@ body::after {
                 <h2 class="product-section-title">机械外骨骼</h2>
                 <span class="product-section-count">8 款产品</span>
             </div>
+            
             <div class="product-grid">
                 
-            <div class="product-card">
+            <div class="product-card" data-subcat="灵巧手">
                 <div class="product-id">#044</div>
                 <h3 class="product-name">Linker Hand O30</h3>
                 <p class="product-company">灵心巧手（北京）科技股份有限公司</p>
                 <p class="product-features">全直驱灵巧手，完美复刻人手大小，实现20个全独立主动自由度。</p>
                 <div class="product-tags"><span class="product-tag">灵巧手</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="灵巧手">
                 <div class="product-id">#046</div>
                 <h3 class="product-name">触觉数采手套</h3>
                 <p class="product-company">墨现科技（东莞）有限公司</p>
                 <p class="product-features">用于测量手部接触压力分布，高密度传感阵列，突破柔性织物高分辨率瓶颈。</p>
                 <div class="product-tags"><span class="product-tag">灵巧手</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="灵巧手">
                 <div class="product-id">#047</div>
                 <h3 class="product-name">Xynova prima 直驱灵巧手</h3>
                 <p class="product-company">杭州曦诺未来科技有限公司</p>
                 <p class="product-features">22DOF仿生构型，全直驱零背隙，视触觉多模态融合，极致负载自重比。</p>
                 <div class="product-tags"><span class="product-tag">灵巧手</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="灵巧手">
                 <div class="product-id">#049</div>
                 <h3 class="product-name">ROPA6人工智能全骨科手术机器人</h3>
                 <p class="product-company">北京长木谷医疗科技股份有限公司</p>
                 <p class="product-features">全球首个一体化形态注册的AI+全骨科手术机器人平台，实现“六位一体”全术式整合。</p>
                 <div class="product-tags"><span class="product-tag">灵巧手</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="关节模组">
                 <div class="product-id">#055</div>
                 <h3 class="product-name">人形机器人 外骨骼 关节模组</h3>
                 <p class="product-company">北京源奇点科技有限公司</p>
                 <p class="product-features">提供一米八整机人形机器人、消费级外骨骼O1及自研关节模组。</p>
                 <div class="product-tags"><span class="product-tag">关节模组</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="灵巧手">
                 <div class="product-id">#059</div>
                 <h3 class="product-name">DH116系列增强型灵巧手+多维力触觉传感器</h3>
                 <p class="product-company">深圳市雷赛智能控制股份有限公司</p>
                 <p class="product-features">灵敏，高精，多维，内走线。</p>
                 <div class="product-tags"><span class="product-tag">灵巧手</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="关节模组">
                 <div class="product-id">#095</div>
                 <h3 class="product-name">探路者智能运动外骨骼Crest C3</h3>
                 <p class="product-company">探路者控股集团股份有限公司</p>
                 <p class="product-features">以1.8kg重量提升40%腿部力量，自动识别多种运动状态，4小时续航。</p>
                 <div class="product-tags"><span class="product-tag">关节模组</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="关节模组">
                 <div class="product-id">#096</div>
                 <h3 class="product-name">下肢外骨骼</h3>
                 <p class="product-company">上海傲意信息科技有限公司</p>
@@ -1057,282 +1065,283 @@ body::after {
                 <h2 class="product-section-title">机器人配件</h2>
                 <span class="product-section-count">40 款产品</span>
             </div>
+            
             <div class="product-grid">
                 
-            <div class="product-card">
+            <div class="product-card" data-subcat="芯片">
                 <div class="product-id">#057</div>
                 <h3 class="product-name">RK182X AI协处理芯片</h3>
                 <p class="product-company">瑞芯微电子股份有限公司</p>
                 <p class="product-features">面向AI应用的高性能协处理器，内置多核RISC-V CPU与NPU，支持大语言模型本地部署。</p>
                 <div class="product-tags"><span class="product-tag">芯片</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="光电传感器">
                 <div class="product-id">#058</div>
                 <h3 class="product-name">面向具身智能的视觉传感器组合</h3>
                 <p class="product-company">奥比中光科技集团股份有限公司</p>
                 <p class="product-features">搭载AI-native深度引擎，在大视野与高质量深度间取得平衡，工业级标准设计。</p>
                 <div class="product-tags"><span class="product-tag">光电传感器</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="光电传感器">
                 <div class="product-id">#060</div>
                 <h3 class="product-name">IERF3 L光电式编码器</h3>
                 <p class="product-company">福尔哈贝传动技术（太仓）有限公司</p>
                 <p class="product-features">纳米级定位专家。</p>
                 <div class="product-tags"><span class="product-tag">光电传感器</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#061</div>
                 <h3 class="product-name">巨蟹智能 谐波关节模组</h3>
                 <p class="product-company">无锡巨蟹智能驱动科技有限公司</p>
                 <p class="product-features">高扭矩密度，标配高分辨率双磁编码器，一体化驱控系统，传动背隙小。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#062</div>
                 <h3 class="product-name">无框力矩电机</h3>
                 <p class="product-company">苏州卓誉电气技术有限公司</p>
                 <p class="product-features">高功率密度、高峰值转矩、高性价比、高平稳性，低齿槽转矩、低发热量。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="导航">
                 <div class="product-id">#063</div>
                 <h3 class="product-name">灵睛S2 Lite感知导航模组</h3>
                 <p class="product-company">武汉朗毅机器人有限公司</p>
                 <p class="product-features">轻量化，高精度导航，适配多款机型。</p>
                 <div class="product-tags"><span class="product-tag">导航</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="相机">
                 <div class="product-id">#064</div>
                 <h3 class="product-name">WLR-750L</h3>
                 <p class="product-company">武汉万集光电技术有限公司</p>
                 <p class="product-features">激光雷达视频一体机，点云与图像精准对齐，测近能力强，强抗干扰。</p>
                 <div class="product-tags"><span class="product-tag">相机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#065</div>
                 <h3 class="product-name">JMD系列关节模组伺服驱动</h3>
                 <p class="product-company">清能德创电气技术（北京）有限公司</p>
                 <p class="product-features">采用EtherCAT高速总线，支持全闭环力控，持续输出功率大。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="环境感知">
                 <div class="product-id">#067</div>
                 <h3 class="product-name">华威科万象系列超高精度感知触觉传感器</h3>
                 <p class="product-company">武汉华威科智能技术有限公司</p>
                 <p class="product-features">超高精度，可捕捉微力，工业级稳定，大量程高过载，多协议适配。</p>
                 <div class="product-tags"><span class="product-tag">环境感知</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="采集">
                 <div class="product-id">#068</div>
                 <h3 class="product-name">极致无感&全模态大规模具身智能数采产品套件</h3>
                 <p class="product-company">北京章鱼灵动科技有限公司</p>
                 <p class="product-features">全模态数据采集，摆脱本体依赖，高精度同步，极致无感采集原生行为。</p>
                 <div class="product-tags"><span class="product-tag">采集</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#069</div>
                 <h3 class="product-name">控制器ESCON2 Modele 60/12</h3>
                 <p class="product-company">苏州钧和伺服科技有限公司</p>
                 <p class="product-features">电流和速度闭环控制器，操作简单，性能高。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="未知">
                 <div class="product-id">#070</div>
                 <h3 class="product-name">KL6D-B75-B系列</h3>
                 <p class="product-company">宁波柯力传感科技股份有限公司</p>
                 <p class="product-features"></p>
                 <div class="product-tags"><span class="product-tag">未知</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#072</div>
                 <h3 class="product-name">DM-JH17-2EC</h3>
                 <p class="product-company">深圳市达妙科技有限公司</p>
                 <p class="product-features">支持宽电压，低速大扭矩，搭载双编码器，多重电气防护，性价比高。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="未知">
                 <div class="product-id">#073</div>
                 <h3 class="product-name">Mid-360S</h3>
                 <p class="product-company">深圳市览沃科技有限公司</p>
                 <p class="product-features"></p>
                 <div class="product-tags"><span class="product-tag">未知</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="编码器">
                 <div class="product-id">#074</div>
                 <h3 class="product-name">线性编码器</h3>
                 <p class="product-company">安徽希磁科技股份有限公司</p>
                 <p class="product-features">分辨率0.05μm，重复精度1μm，无惧粉尘油污，适配精密直线场景。</p>
                 <div class="product-tags"><span class="product-tag">编码器</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#075</div>
                 <h3 class="product-name">谐波模组</h3>
                 <p class="product-company">苏州卓誉电气技术有限公司</p>
                 <p class="product-features">高转矩密度，高稳定性，高灵活性，高响应速度，高适用性。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#076</div>
                 <h3 class="product-name">SXR系列直流有刷电机</h3>
                 <p class="product-company">福尔哈贝传动技术（太仓）有限公司</p>
                 <p class="product-features">微电机性能革命。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="相机">
                 <div class="product-id">#077</div>
                 <h3 class="product-name">奥比中光无本体数据采集套件</h3>
                 <p class="product-company">奥比中光科技集团股份有限公司</p>
                 <p class="product-features">行业领先的相机标定技术，先进多传感器融合能力，保障数据采集质量。</p>
                 <div class="product-tags"><span class="product-tag">相机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="相机">
                 <div class="product-id">#078</div>
                 <h3 class="product-name">RealSense GMSL/FAKRA相机</h3>
                 <p class="product-company">实感科技（北京）有限公司</p>
                 <p class="product-features">车规接口，低延迟高带宽，工业可靠，可扩展感知，易集成升级。</p>
                 <div class="product-tags"><span class="product-tag">相机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#079</div>
                 <h3 class="product-name">KIZ系列窄码道电感编码器</h3>
                 <p class="product-company">浙江锐鹰传感技术股份有限公司</p>
                 <p class="product-features">单圈23bit分辨率，安装冗余大，一键调试，轻薄，稳定性强。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#083</div>
                 <h3 class="product-name">米思米直线电机模组</h3>
                 <p class="product-company">米思米(中国)精密机械贸易有限公司</p>
                 <p class="product-features">高速，高精度，多动子，高耐久。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#084</div>
                 <h3 class="product-name">HRE油封</h3>
                 <p class="product-company">恩福贸易（上海）有限公司</p>
                 <p class="product-features">专属工况设计，三重密封防护，适配高频工况，低耗耐用。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="环境感知">
                 <div class="product-id">#085</div>
                 <h3 class="product-name">晶眸系列 纯固态全晰高精度3D空间解析模组</h3>
                 <p class="product-company">武汉灵途传感科技有限公司</p>
                 <p class="product-features">复杂材质稳定感知，高速动态感知，精准空间建模，灵活感知配置。</p>
                 <div class="product-tags"><span class="product-tag">环境感知</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="相机">
                 <div class="product-id">#086</div>
                 <h3 class="product-name">线激光3D相机 焊接机器人视觉系统 3DVision-LD800</h3>
                 <p class="product-company">麦克奥迪实业集团有限公司</p>
                 <p class="product-features">主动式双目立体视觉3D相机，面向智能焊接，适应复杂表面。</p>
                 <div class="product-tags"><span class="product-tag">相机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="底盘">
                 <div class="product-id">#098</div>
                 <h3 class="product-name">Poseidon全向移动机器人底盘</h3>
                 <p class="product-company">上海思岚科技有限公司</p>
                 <p class="product-features">四轮独立转向，全域全向机动，150kg额定负载，支持双热插拔换电。</p>
                 <div class="product-tags"><span class="product-tag">底盘</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="底盘">
                 <div class="product-id">#099</div>
                 <h3 class="product-name">IB2S轮式机器人底盘</h3>
                 <p class="product-company">上海新时达机器人有限公司</p>
                 <p class="product-features">四舵轮全向通行，双3D雷达定位，双电池7×24h运行，适用工业环境。</p>
                 <div class="product-tags"><span class="product-tag">底盘</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="未知">
                 <div class="product-id">#115</div>
                 <h3 class="product-name">KL6D-D65-B系列</h3>
                 <p class="product-company">宁波柯力传感科技股份有限公司</p>
                 <p class="product-features">信息未提供。</p>
                 <div class="product-tags"><span class="product-tag">未知</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#116</div>
                 <h3 class="product-name">机器人关节高精度游标磁编MLX90384</h3>
                 <p class="product-company">迈来芯电子科技（上海）有限公司</p>
                 <p class="product-features">信息未提供。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#117</div>
                 <h3 class="product-name">行星关节模组</h3>
                 <p class="product-company">杭州良质关节科技有限公司</p>
                 <p class="product-features">信息未提供。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="相机">
                 <div class="product-id">#118</div>
                 <h3 class="product-name">Mid-360L</h3>
                 <p class="product-company">深圳市览沃科技有限公司</p>
                 <p class="product-features">信息未提供。</p>
                 <div class="product-tags"><span class="product-tag">相机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="配件">
                 <div class="product-id">#119</div>
                 <h3 class="product-name">微型反向式行星滚柱丝杠</h3>
                 <p class="product-company">杭州玖月捌传动科技有限公司</p>
                 <p class="product-features">信息未提供。</p>
                 <div class="product-tags"><span class="product-tag">配件</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="编码器">
                 <div class="product-id">#120</div>
                 <h3 class="product-name">编码器</h3>
                 <p class="product-company">苏州钧和伺服科技有限公司</p>
                 <p class="product-features">反馈精准、连接简便、可靠性高，可实现对各类运动的完美控制。</p>
                 <div class="product-tags"><span class="product-tag">编码器</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#121</div>
                 <h3 class="product-name">直线执行器</h3>
                 <p class="product-company">苏州卓誉电气技术有限公司</p>
                 <p class="product-features">一体化执行机构，推力覆盖广，采用反向式行星滚柱丝杠，已实现量产。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#122</div>
                 <h3 class="product-name">16毫米电机</h3>
                 <p class="product-company">福尔哈贝传动技术（太仓）有限公司</p>
                 <p class="product-features">电机-减速箱-编码器全链路方案。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="芯片">
                 <div class="product-id">#123</div>
                 <h3 class="product-name">T38C边缘网关</h3>
                 <p class="product-company">中亿（深圳）具身智能科技有限公司</p>
                 <p class="product-features">旗舰RK3588处理器，6TOPS NPU，支持8K编解码，工业级宽温。</p>
                 <div class="product-tags"><span class="product-tag">芯片</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#124</div>
                 <h3 class="product-name">TRS单维扭矩传感器MEMS</h3>
                 <p class="product-company">浙江锐鹰传感技术股份有限公司</p>
                 <p class="product-features">精度高、温漂小、抗窜扰、抗冲击、可靠性高。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#125</div>
                 <h3 class="product-name">DM-D5730-1EE</h3>
                 <p class="product-company">深圳市达妙科技有限公司</p>
                 <p class="product-features">支持宽电压，动态响应迅速，搭载17位编码器，兼容多种控制模式。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#126</div>
                 <h3 class="product-name">直线型电驱动关节</h3>
                 <p class="product-company">杭州新剑机电传动股份有限公司</p>
                 <p class="product-features">推力覆盖全机身部位，最高线速度300mm/s，依托反向式行星滚柱丝杠结构。</p>
                 <div class="product-tags"><span class="product-tag">电机</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="运动控制">
                 <div class="product-id">#127</div>
                 <h3 class="product-name">新时达高性能通用关节模组</h3>
                 <p class="product-company">上海新时达机器人有限公司</p>
                 <p class="product-features">小体积高集成，高性能，高可靠性，高扭矩。</p>
                 <div class="product-tags"><span class="product-tag">运动控制</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="电机">
                 <div class="product-id">#128</div>
                 <h3 class="product-name">IMSD轮毂电机</h3>
                 <p class="product-company">上海鸣志电器股份有限公司</p>
@@ -1349,30 +1358,31 @@ body::after {
                 <h2 class="product-section-title">软件平台</h2>
                 <span class="product-section-count">4 款产品</span>
             </div>
+            
             <div class="product-grid">
                 
-            <div class="product-card">
+            <div class="product-card" data-subcat="软件平台">
                 <div class="product-id">#066</div>
                 <h3 class="product-name">潜擎·MotionMotive人形机器人通用动作创作平台</h3>
                 <p class="product-company">潜空间智能科技（武汉）有限公司</p>
                 <p class="product-features">支持多模态输入的机器人动作开发平台，无需代码即可开发，泛化性强。</p>
                 <div class="product-tags"><span class="product-tag">软件平台</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="软件平台">
                 <div class="product-id">#080</div>
                 <h3 class="product-name">睛灵·智域-具身智能协作管控平台</h3>
                 <p class="product-company">中科开创（广州）智能科技发展有限公司</p>
                 <p class="product-features">兼容异构机器人，联动3D语义场景，拖拽式编排任务，支持本地私有化部署。</p>
                 <div class="product-tags"><span class="product-tag">软件平台</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="软件平台">
                 <div class="product-id">#081</div>
                 <h3 class="product-name">FunSim物理AI仿真训练平台</h3>
                 <p class="product-company">广州凡拓数字创意科技股份有限公司</p>
                 <p class="product-features">高保真物理模拟，支持多智能体环境仿真，可生成合成数据，提供全流程开发工作流。</p>
                 <div class="product-tags"><span class="product-tag">软件平台</span></div>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-subcat="软件平台">
                 <div class="product-id">#082</div>
                 <h3 class="product-name">具身智能足式机器人装调实训平台</h3>
                 <p class="product-company">北京亦庄国际人才发展集团有限公司</p>
@@ -1389,9 +1399,10 @@ body::after {
                 <h2 class="product-section-title">双足/轮式机器人</h2>
                 <span class="product-section-count">1 款产品</span>
             </div>
+            
             <div class="product-grid">
                 
-            <div class="product-card" onclick="window.open('https://www.9fzt.com/9fztgw_1_top/265ddd3421dfca0bc56aca8a95b9f6f8.html', '_blank')" style="cursor:pointer;">
+            <div class="product-card" onclick="window.open('https://www.9fzt.com/9fztgw_1_top/265ddd3421dfca0bc56aca8a95b9f6f8.html', '_blank')" style="cursor:pointer;" data-subcat="小型轮足/点足">
                 <div class="product-id">#002</div>
                 <h3 class="product-name">Microduck</h3>
                 <p class="product-company">Hugging Face</p>
@@ -1519,6 +1530,27 @@ body::after {
         updateVisibility();
     })();
     
+
+(function() {
+    var section = document.getElementById('quad-section');
+    if (!section) return;
+    var buttons = section.querySelectorAll('.subcat-btn');
+    var cards = section.querySelectorAll('.product-card');
+    buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            buttons.forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var filter = btn.dataset.subcat;
+            cards.forEach(function(card) {
+                if (filter === 'all' || card.dataset.subcat === filter) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+})();
 
 
 (function() {

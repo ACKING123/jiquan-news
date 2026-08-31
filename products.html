@@ -205,6 +205,12 @@ body::after {
 .load-more { display: flex; justify-content: center; margin-top: 24px; }
 .load-more-btn { padding: 12px 40px; background: var(--bg2); border: 1px solid var(--rule); color: var(--muted); font-size: 14px; cursor: pointer; border-radius: 8px; transition: all 0.3s ease; font-family: inherit; }
 .load-more-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,240,255,0.05); }
+.more-info-hint { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 28px; padding: 16px 24px; background: linear-gradient(135deg, rgba(0,240,255,0.06), rgba(168,85,247,0.04)); border: 1px solid rgba(0,240,255,0.15); border-radius: 10px; transition: all 0.3s ease; }
+.more-info-hint:hover { border-color: var(--accent); background: linear-gradient(135deg, rgba(0,240,255,0.12), rgba(168,85,247,0.08)); }
+.more-info-icon { font-size: 18px; }
+.more-info-text { font-size: 15px; font-weight: 500; color: var(--fg); letter-spacing: 0.5px; }
+.more-info-arrow { font-size: 16px; color: var(--accent); transition: transform 0.3s ease; }
+.more-info-hint:hover .more-info-arrow { transform: translateX(4px); }
 
 @media (max-width: 1024px) {
     .main-layout { grid-template-columns: 1fr; }

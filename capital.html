@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>资本动态 - 机犬智讯 - 机犬智讯 JIQUAN NEWS</title>
+    <title>资本动态 - 机犬智讯</title>
     <meta name="description" content="聚焦全球机器狗与四足机器人行业动态，实时追踪技术突破、资本动向、产业落地与海外市场">
     <style>
 @font-face { font-family: 'InstrumentSans'; src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype'); font-weight: 400; }
@@ -212,10 +212,14 @@ body::after {
     .cat-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-    .header-inner { height: 64px; }
-    .logo-main { font-size: 26px; }
-    .nav-item { font-size: 12px; padding: 6px 10px; }
-    .main-nav { display: none; }
+    .header-inner { height: 56px; }
+    .logo-main { font-size: 22px; }
+    .logo-sub { font-size: 9px; letter-spacing: 2px; }
+    .main-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 2px; }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .nav-item { font-size: 12px; padding: 6px 8px; flex-shrink: 0; }
+    .nav-item.nav-home { font-size: 13px; }
+    .header-right { display: none; }
     .featured-slider { height: 360px; }
     .slide-title { font-size: 22px; }
     .slide-content { padding: 24px; }

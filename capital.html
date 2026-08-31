@@ -42,7 +42,6 @@ body::after {
 }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-/* Header */
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 .logo { display: flex; flex-direction: column; text-decoration: none; position: relative; }
@@ -58,7 +57,6 @@ body::after {
 .live-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,0.7)} 50%{opacity:0.8;box-shadow:0 0 0 8px rgba(34,197,94,0)} }
 
-/* Slider */
 .hero-section { padding: 32px 0 24px; }
 .featured-slider { position: relative; height: 400px; border-radius: 16px; overflow: hidden; border: 1px solid var(--rule); background: var(--bg2); }
 .slides-container { position: relative; width: 100%; height: 100%; }
@@ -89,13 +87,11 @@ body::after {
 .slide-dot { width: 8px; height: 8px; border-radius: 4px; background: var(--rule); border: none; cursor: pointer; transition: all 0.3s ease; }
 .slide-dot.active { width: 24px; background: var(--accent); box-shadow: var(--glow-cyan); }
 
-/* Layout */
 .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 28px; padding: 24px 0 48px; }
 .filter-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
 .section-title { font-family: 'BigShoulders', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: 1px; display: flex; align-items: center; gap: 12px; }
 .section-title::before { content: ''; width: 4px; height: 24px; background: linear-gradient(180deg, var(--accent), var(--accent2)); border-radius: 2px; }
 
-/* News cards */
 .news-list { display: flex; flex-direction: column; gap: 16px; }
 .news-card { position: relative; display: flex; gap: 20px; padding: 24px; background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; transition: all 0.3s ease; overflow: hidden; }
 .news-card:hover { border-color: rgba(0,240,255,0.3); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,240,255,0.1); }
@@ -124,7 +120,6 @@ body::after {
 .summary-tag { flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.5px; margin-top: 1px; }
 .summary-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* Sidebar */
 .sidebar { display: flex; flex-direction: column; gap: 24px; }
 .sidebar-widget { background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
 .widget-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--rule); }
@@ -148,7 +143,6 @@ body::after {
 .chart-container { width: 100%; min-height: 200px; }
 .chart-container.tall { min-height: 280px; }
 
-/* Category nav cards (home page) */
 .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
 .cat-card { display: flex; flex-direction: column; padding: 20px; background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden; }
 .cat-card:hover { border-color: var(--cat-color, var(--accent)); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
@@ -158,7 +152,6 @@ body::after {
 .cat-desc { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
 .cat-count { font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--cat-color, var(--accent)); }
 
-/* Products page */
 .product-section { margin-bottom: 40px; }
 .product-section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
 .product-section-icon { font-size: 24px; }
@@ -176,12 +169,10 @@ body::after {
 .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .product-tag { font-size: 10px; padding: 2px 8px; background: var(--bg3); border: 1px solid var(--rule); border-radius: 10px; color: var(--muted); }
 
-/* Page header */
 .page-header { padding: 32px 0 24px; }
 .page-title { font-family: 'BigShoulders', sans-serif; font-size: 36px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; }
 .page-subtitle { font-size: 15px; color: var(--muted); }
 
-/* Footer */
 .site-footer { background: var(--bg2); border-top: 1px solid var(--rule); padding: 40px 0 24px; margin-top: 48px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
 .footer-brand .logo { margin-bottom: 12px; }
@@ -197,18 +188,15 @@ body::after {
 .footer-tech { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
 .tech-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: var(--glow-cyan); }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
-/* Load more */
 .load-more { display: flex; justify-content: center; margin-top: 24px; }
 .load-more-btn { padding: 12px 40px; background: var(--bg2); border: 1px solid var(--rule); color: var(--muted); font-size: 14px; cursor: pointer; border-radius: 8px; transition: all 0.3s ease; font-family: inherit; }
 .load-more-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,240,255,0.05); }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .main-layout { grid-template-columns: 1fr; }
     .sidebar { order: -1; }
@@ -246,12 +234,8 @@ body::after {
                 <nav class="main-nav">
                     <a href="index.html" class="nav-item ">首页</a>
 <a href="capital.html" class="nav-item active">资本</a>
-<a href="tech.html" class="nav-item ">技术</a>
-<a href="security.html" class="nav-item ">安防</a>
 <a href="industry.html" class="nav-item ">工业</a>
-<a href="overseas.html" class="nav-item ">海外</a>
 <a href="consumer.html" class="nav-item ">消费</a>
-<a href="expo.html" class="nav-item ">盛会</a>
 <a href="products.html" class="nav-item ">展品</a>
 
                 </nav>
@@ -480,21 +464,17 @@ body::after {
                 </div>
                 <div class="sidebar-widget">
                     <div class="widget-header">
-                        <span class="widget-title"><span>📊</span> 分类数据</span>
+                        <span class="widget-title"><span>📊</span> 分类总览</span>
                     </div>
                     <div class="stats-grid">
-                        <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">资讯总数</div></div>
+                        <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">本类资讯</div></div>
                         <div class="stat-item"><div class="stat-value">8.7</div><div class="stat-label">平均热度</div></div>
                         <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">覆盖天数</div></div>
                         <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">品牌机构</div></div>
                     </div>
-                </div>
-                <div class="sidebar-widget">
-                    <div class="widget-header">
-                        <span class="widget-title"><span>🌐</span> 其他分类</span>
-                    </div>
-                    <div class="widget-body">
-                        <a href="tech.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🔬</span><div class="rank-info"><p class="rank-title">技术突破</p><span class="rank-score">12 条资讯</span></div></a><a href="security.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🛡️</span><div class="rank-info"><p class="rank-title">安防巡检</p><span class="rank-score">7 条资讯</span></div></a><a href="industry.html" class="rank-item" style="text-decoration:none"><span class="rank-num">⚙️</span><div class="rank-info"><p class="rank-title">工业应用</p><span class="rank-score">7 条资讯</span></div></a><a href="overseas.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🌐</span><div class="rank-info"><p class="rank-title">海外市场</p><span class="rank-score">9 条资讯</span></div></a><a href="consumer.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🏠</span><div class="rank-info"><p class="rank-title">消费民生</p><span class="rank-score">8 条资讯</span></div></a><a href="expo.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🎪</span><div class="rank-info"><p class="rank-title">行业盛会</p><span class="rank-score">4 条资讯</span></div></a>
+                    <div class="chart-widget">
+                        <p style="font-size:12px;color:var(--muted);margin-bottom:8px;text-align:center;">点击饼图扇区跳转至对应分类</p>
+                        <div id="catDistChart" class="chart-container" style="min-height:260px;"></div>
                     </div>
                 </div>
             </aside>
@@ -518,17 +498,13 @@ body::after {
                         <h4>资讯分类</h4>
                         <ul>
                             <li><a href="capital.html">资本动态</a></li>
-                            <li><a href="tech.html">技术突破</a></li>
-                            <li><a href="security.html">安防巡检</a></li>
-                            <li><a href="industry.html">工业应用</a></li>
-                            <li><a href="overseas.html">海外市场</a></li>
+                            <li><a href="industry.html">工业</a></li>
+                            <li><a href="consumer.html">消费民生</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>更多</h4>
                         <ul>
-                            <li><a href="consumer.html">消费民生</a></li>
-                            <li><a href="expo.html">行业盛会</a></li>
                             <li><a href="products.html">WRC展品</a></li>
                         </ul>
                     </div>
@@ -543,7 +519,7 @@ body::after {
             </div>
         </div>
     </footer>
-
+<script src="./_shared/js/echarts.min.js"></script>
 <script>
 
     (function() {
@@ -580,6 +556,68 @@ body::after {
     })();
     
 
+
+(function() {
+    const style = getComputedStyle(document.documentElement);
+    var ink = style.getPropertyValue('--ink').trim();
+    var muted = style.getPropertyValue('--muted').trim();
+    var rule = style.getPropertyValue('--rule').trim();
+    var bg2 = style.getPropertyValue('--bg2').trim();
+    var chart = echarts.init(document.getElementById('catDistChart'), null, { renderer: 'svg' });
+    var catData = [{"name": "\u5de5\u4e1a", "value": 42, "itemStyle": {"color": "#22c55e"}}, {"name": "\u8d44\u672c\u52a8\u6001", "value": 7, "itemStyle": {"color": "#f59e0b"}}, {"name": "\u6d88\u8d39\u6c11\u751f", "value": 5, "itemStyle": {"color": "#ec4899"}}];
+    var catKeys = ["industry", "capital", "consumer"];
+    var currentCat = 'capital';
+    chart.setOption({
+        animation: false,
+        tooltip: {
+            trigger: 'item',
+            appendToBody: true,
+            backgroundColor: bg2,
+            borderColor: rule,
+            textStyle: { color: ink },
+            formatter: function(p) {
+                return p.name + ': ' + p.value + ' 条 (' + p.percent + '%)';
+            }
+        },
+        series: [{
+            type: 'pie',
+            radius: ['40%', '68%'],
+            center: ['50%', '50%'],
+            avoidLabelOverlap: true,
+            itemStyle: { borderRadius: 4, borderColor: bg2, borderWidth: 2 },
+            label: {
+                show: true,
+                position: 'outside',
+                color: muted,
+                fontSize: 11,
+                formatter: '{b}\n{c}条'
+            },
+            labelLine: { lineStyle: { color: rule } },
+            emphasis: {
+                itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0,0,0,0.5)' },
+                label: { fontSize: 13, fontWeight: 'bold', color: ink }
+            },
+            data: catData.map(function(d, i) {
+                var isCurrent = catKeys[i] === currentCat;
+                return {
+                    name: d.name,
+                    value: d.value,
+                    itemStyle: {
+                        color: d.itemStyle.color,
+                        borderColor: isCurrent ? ink : bg2,
+                        borderWidth: isCurrent ? 3 : 2
+                    },
+                    label: { color: isCurrent ? ink : muted, fontWeight: isCurrent ? 'bold' : 'normal' }
+                };
+            })
+        }]
+    });
+    chart.on('click', function(p) {
+        var idx = catData.findIndex(function(d) { return d.name === p.name; });
+        if (idx >= 0) { window.location.href = catKeys[idx] + '.html'; }
+    });
+    window.addEventListener('resize', function() { chart.resize(); });
+})();
 
 </script>
 </body>

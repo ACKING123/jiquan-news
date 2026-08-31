@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工业应用 - 机犬智讯 - 机犬智讯 JIQUAN NEWS</title>
+    <title>工业 - 机犬智讯 - 机犬智讯 JIQUAN NEWS</title>
     <meta name="description" content="聚焦全球机器狗与四足机器人行业动态，实时追踪技术突破、资本动向、产业落地与海外市场">
     <style>
 @font-face { font-family: 'InstrumentSans'; src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype'); font-weight: 400; }
@@ -42,7 +42,6 @@ body::after {
 }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-/* Header */
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 .logo { display: flex; flex-direction: column; text-decoration: none; position: relative; }
@@ -58,7 +57,6 @@ body::after {
 .live-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,0.7)} 50%{opacity:0.8;box-shadow:0 0 0 8px rgba(34,197,94,0)} }
 
-/* Slider */
 .hero-section { padding: 32px 0 24px; }
 .featured-slider { position: relative; height: 400px; border-radius: 16px; overflow: hidden; border: 1px solid var(--rule); background: var(--bg2); }
 .slides-container { position: relative; width: 100%; height: 100%; }
@@ -89,13 +87,11 @@ body::after {
 .slide-dot { width: 8px; height: 8px; border-radius: 4px; background: var(--rule); border: none; cursor: pointer; transition: all 0.3s ease; }
 .slide-dot.active { width: 24px; background: var(--accent); box-shadow: var(--glow-cyan); }
 
-/* Layout */
 .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 28px; padding: 24px 0 48px; }
 .filter-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
 .section-title { font-family: 'BigShoulders', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: 1px; display: flex; align-items: center; gap: 12px; }
 .section-title::before { content: ''; width: 4px; height: 24px; background: linear-gradient(180deg, var(--accent), var(--accent2)); border-radius: 2px; }
 
-/* News cards */
 .news-list { display: flex; flex-direction: column; gap: 16px; }
 .news-card { position: relative; display: flex; gap: 20px; padding: 24px; background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; transition: all 0.3s ease; overflow: hidden; }
 .news-card:hover { border-color: rgba(0,240,255,0.3); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,240,255,0.1); }
@@ -124,7 +120,6 @@ body::after {
 .summary-tag { flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.5px; margin-top: 1px; }
 .summary-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* Sidebar */
 .sidebar { display: flex; flex-direction: column; gap: 24px; }
 .sidebar-widget { background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
 .widget-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--rule); }
@@ -148,7 +143,6 @@ body::after {
 .chart-container { width: 100%; min-height: 200px; }
 .chart-container.tall { min-height: 280px; }
 
-/* Category nav cards (home page) */
 .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
 .cat-card { display: flex; flex-direction: column; padding: 20px; background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden; }
 .cat-card:hover { border-color: var(--cat-color, var(--accent)); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
@@ -158,7 +152,6 @@ body::after {
 .cat-desc { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
 .cat-count { font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--cat-color, var(--accent)); }
 
-/* Products page */
 .product-section { margin-bottom: 40px; }
 .product-section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
 .product-section-icon { font-size: 24px; }
@@ -176,12 +169,10 @@ body::after {
 .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .product-tag { font-size: 10px; padding: 2px 8px; background: var(--bg3); border: 1px solid var(--rule); border-radius: 10px; color: var(--muted); }
 
-/* Page header */
 .page-header { padding: 32px 0 24px; }
 .page-title { font-family: 'BigShoulders', sans-serif; font-size: 36px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; }
 .page-subtitle { font-size: 15px; color: var(--muted); }
 
-/* Footer */
 .site-footer { background: var(--bg2); border-top: 1px solid var(--rule); padding: 40px 0 24px; margin-top: 48px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
 .footer-brand .logo { margin-bottom: 12px; }
@@ -197,18 +188,15 @@ body::after {
 .footer-tech { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
 .tech-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: var(--glow-cyan); }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
-/* Load more */
 .load-more { display: flex; justify-content: center; margin-top: 24px; }
 .load-more-btn { padding: 12px 40px; background: var(--bg2); border: 1px solid var(--rule); color: var(--muted); font-size: 14px; cursor: pointer; border-radius: 8px; transition: all 0.3s ease; font-family: inherit; }
 .load-more-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,240,255,0.05); }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .main-layout { grid-template-columns: 1fr; }
     .sidebar { order: -1; }
@@ -246,12 +234,8 @@ body::after {
                 <nav class="main-nav">
                     <a href="index.html" class="nav-item ">首页</a>
 <a href="capital.html" class="nav-item ">资本</a>
-<a href="tech.html" class="nav-item ">技术</a>
-<a href="security.html" class="nav-item ">安防</a>
 <a href="industry.html" class="nav-item active">工业</a>
-<a href="overseas.html" class="nav-item ">海外</a>
 <a href="consumer.html" class="nav-item ">消费</a>
-<a href="expo.html" class="nav-item ">盛会</a>
 <a href="products.html" class="nav-item ">展品</a>
 
                 </nav>
@@ -267,20 +251,125 @@ body::after {
 
     <main class="container">
         <div class="page-header">
-            <h1 class="page-title">⚙️ 工业应用</h1>
-            <p class="page-subtitle">电力、矿山、制造与工业场景落地 · 共 7 条资讯</p>
+            <h1 class="page-title">⚙️ 工业</h1>
+            <p class="page-subtitle">安防巡检、技术研发、电力矿山、海外市场与行业盛会 · 共 42 条资讯</p>
         </div>
 
         <div class="main-layout">
             <div class="main-col">
                 <div class="filter-bar">
-                    <h2 class="section-title">工业应用资讯</h2>
+                    <h2 class="section-title">工业资讯</h2>
                 </div>
                 
                 <div class="news-list" id="newsList">
                     
             <article class="news-card">
                 <div class="card-rank">1</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">行业整体</span>
+                        <span class="card-date">2026-08-28</span>
+                        <span class="card-score score-hot">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">10</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.xinhuanet.com/20260828/2e0468efdbd34d8589d98c1c2cb5a158/c.html" target="_blank" rel="noopener">2026中国国际大数据产业博览会开幕 372家中外企业参展</a></h3>
+                    <p class="card-overview">2026中国国际大数据产业博览会在贵阳开幕。本届大会由国家数据局主办、贵州省人民政府承办。设置了开幕式、专业展览、行业交流、展产融合、品牌赛事五类活动，由广东省担任主宾省。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">国家级数据盛会首次设立具身智能体验区，标志着四足机器人作为数据采集与物理执行终端，正式被纳入数字经济核心基础设施范畴；人机协同从概念走向开幕式主持、非遗表...</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">2</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">宇树科技</span>
+                        <span class="card-date">2026-08-20</span>
+                        <span class="card-score score-hot">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">9</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.cnstock.com/commonDetail/764009" target="_blank" rel="noopener">上海证券报：宇树上市后，王兴兴最新公开发声</a></h3>
+                    <p class="card-overview">宇树科技创始人王兴兴在WRC主论坛表示，具身智能最大瓶颈是AI模型输入输出与机器人对齐不够，最后几厘米误差导致成功率暴跌；公司正推动物理AI机器人模型自进化。8月20日宇树股价盘中一度跌超17%，收盘跌14.79%。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">上市次日股价大幅波动反映市场对行业早期阶段的高预期与高不确定性并存；王兴兴坦诚行业瓶颈，自进化路线或成破局关键。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">3</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">智元创新（D1 Max巡检四足机器人）</span>
+                        <span class="card-date">2026-08-16</span>
+                        <span class="card-score score-hot">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">9</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.shaoxing.com.cn/p/3457241.html" target="_blank" rel="noopener">绍兴网：绍兴知名企业，机器人持证上岗正式入职</a></h3>
+                    <p class="card-overview">绍兴上虞区5家化工企业13台智元D1 Max机器狗持证上岗，24小时循环巡检高危厂房，精准识别氯气、氢气泄漏并自动报警，任务完成率92.5%-95%，大幅减轻工人高温有毒环境下作业压力。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">化工高危场景率先实现机器人替代，安全标准与行业认证体系同步建立，持证上岗机制为行业扩面提供背书。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">4</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">智身科技（Genisom AI）、新加坡星耀智能科技</span>
+                        <span class="card-date">2026-08-25</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://news.qq.com/rain/a/20260825A0B2SL00" target="_blank" rel="noopener">中新企业签了个大单！四足机器人先去新加坡，再攻东南亚</a></h3>
+                    <p class="card-overview">新加坡星耀智能科技与中国智身科技签署独家代理合作协议，以新加坡为起点将四足机器人推向东南亚。签约现场展示了四足机器人16公斤持续背负和150公斤静态承载能力、镂空楼梯通行、搭载机械臂行进中视觉操作等能力。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">国产四足机器人借道新加坡辐射东南亚市场，B端工业巡检与安防需求明确，海外渠道建设加速。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">5</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">智身科技</span>
+                        <span class="card-date">2026-08-23</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.wenweipo.com/a/202608/23/AP6a8a863be4b0c1e50025e783.html" target="_blank" rel="noopener">智身科技刘宇龙：让技术路径成熟的机器人先「用起来」</a></h3>
+                    <p class="card-overview">智身科技联合创始人透露，企业采取“先四足后人形”策略，累计量产超15000台、单月产能突破5000台，四足在安防部署数千台、电力交付上百项目、应急进入全国100余家消防总队，今年已启动人形产品线。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">“四足养人形”路线验证成功，量产规模进入万级台阶，多行业落地数据证明四足机器人已从试点走向批量交付。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">6</div>
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-brand">行业整体（矿山巡检机器狗）</span>
@@ -301,7 +390,406 @@ body::after {
             </article>
 
             <article class="news-card">
-                <div class="card-rank">2</div>
+                <div class="card-rank">7</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">开普勒机器人</span>
+                        <span class="card-date">2026-08-19</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://compotech.com.cn/a/press/2026/0819/78983.html" target="_blank" rel="noopener">2026世界机器人大会现场直击：开普勒K3大黄蜂、麒麟四足机器人全系新品亮相，硬核技术诠释＂人机共生＂</a></h3>
+                    <p class="card-overview">开普勒在WRC推出全球首款混动架构重载四足机器狗“麒麟”系列，自研行星滚柱丝杠核心部件；同步发布国内首个原生全感知力触数采系统，打通硬件采集‑模型适配全链路。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">混动重载方案拓展工业应用边界，原生力触数据系统解决模型训练数据闭环痛点，加速场景落地。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">8</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">行业整体（中国厂商）</span>
+                        <span class="card-date">2026-08-17</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://m.21jingji.com/article/20260812/herald/856c1fe635561aa71f732009a6e9db96.html" target="_blank" rel="noopener">21财经/ZAKER财经：国产人形机器人拿下全球97%，智元首次反超宇树</a></h3>
+                    <p class="card-overview">2026上半年全球人形机器人总出货1.91万台，同比增长近3倍，中国厂商占据全球出货97%。智元上半年出货8400台、宇树出货5900台分列前两位。行业估值百亿独角兽企业至少22家，新设企业11.6万户。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">中国厂商在整机制造与产能上已实现对海外同行反超，但大量样机仍处试点阶段，能否拿到持续性付费订单是终极考验。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">9</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">云深处科技（绝影X30PRO）</span>
+                        <span class="card-date">2026-08-17</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://m.toutiao.com/group/7674902786588394026/" target="_blank" rel="noopener">今日头条：云深处机器狗落地沙特新未来城海岸线巡检</a></h3>
+                    <p class="card-overview">云深处绝影X30PRO机器狗部署沙特新未来城项目，承担12公里海岸线巡逻任务，设备具备IP67防护与RTK高精度定位，在当地52℃高温、强沙尘、高盐雾工况下，实现连续超100小时稳定自主巡逻，替代人力完成高危户外巡查工作。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">国产机器狗出海中东高端项目，极端环境适应能力成为海外竞争核心优势。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">10</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">山钢集团（山信软件·莱钢电子）</span>
+                        <span class="card-date">2026-08-16</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.jinantimes.com.cn/news-39-5303233.html" target="_blank" rel="noopener">闪电新闻/大众新闻：炼铁厂来了个全能巡检员</a></h3>
+                    <p class="card-overview">山钢集团60公斤级智能巡检机器狗在高炉风口平台投入使用，适应-20℃至55℃极端环境，单班次覆盖全部检测点位仅需50分钟（人工需2小时），测温误差控制在±0.5℃以内。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">钢铁行业高温高危场景实现无人化巡检，老职工听音辨漏等传统经验正转化为算法参数写入机器狗。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">11</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">行业整体（人形机器人/机器狗等）</span>
+                        <span class="card-date">2026-08-16</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://news.qq.com/rain/a/20260815A09SBE00" target="_blank" rel="noopener">央视网/央视财经：机器人租赁从活跃气氛转型为常态化生产服务工具</a></h3>
+                    <p class="card-overview">机器人租赁市场迎旺季，7月订单环比增长30%、同比增长150%，全国相关企业存量15.3万家，2026年市场规模预计突破100亿元。人形机器人日租金从8000元降至2000-3000元，配套推出机器人救护车1分钟响应、2小时上门。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">租赁价格大幅下降推动市场快速扩容，行业从硬件出租转向内容定制+全流程运营，机器人正从表演工具转型为常态化生产服务工具。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">12</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">行业整体（宇树/云深处/优必选/越疆/全能具身等）</span>
+                        <span class="card-date">2026-08-12</span>
+                        <span class="card-score score-high">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">8</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://finance.sina.com.cn/roll/2026-08-12/doc-inimzivr6954397.shtml" target="_blank" rel="noopener">中国科技网/投资界：第四届中国具身智能机器人产业大会上海举行</a></h3>
+                    <p class="card-overview">8月12-14日，上海新国际博览中心举办第四届具身智能机器人产业大会，宇树、优必选、云深处、越疆等头部企业齐聚。展会直击行业痛点，围绕技术验证、成本压降、场景规模化主线，多款四足/人形机器人展示智能避障、物料分拣等实操能力。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">具身智能从技术秀场走向产业考场，企业不再单纯推销本体，而是配套交付仿真验证+现场调试+运维迭代一体化服务包。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">13</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">塞尔维亚/中国敏实集团</span>
+                        <span class="card-date">2026-08-28</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://news.qq.com/rain/a/20260815A06GUO00" target="_blank" rel="noopener">借助中国技术，武契奇宣布：塞尔维亚首座机器人工厂月底开业</a></h3>
+                    <p class="card-overview">塞尔维亚总统武契奇宣布，塞尔维亚与中国敏实集团联合建设的机器人工厂将于8月28日或29日正式投产，计划生产1000台人形机器人及1万台多功能机器狗。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">中国机器人产业链首次以“整厂输出”模式落地欧洲，产能出海从产品出口升级为产业能力输出，全球化布局进入新阶段。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">14</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">湖南艾博特机器人</span>
+                        <span class="card-date">2026-08-27</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.hunantoday.cn/news/xhn/202608/33587140.html" target="_blank" rel="noopener">数千万元战投赋能，湖南具身智能机器狗龙头“艾博特”全速奔跑</a></h3>
+                    <p class="card-overview">湖南高新产投完成对湖南艾博特机器人技术有限公司数千万元战略投资。艾博特最新研发的ABT-50重载机器狗最大载重50公斤，可攀爬30度陡坡、穿越泥泞地形。湖南首条具身智能四足机器狗生产线预计2026年12月建成投产，年产能可达1万台。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">地方国资加速布局具身智能赛道，重载机器狗在复杂地形作业能力持续突破，区域产业集群建设进入快车道。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">15</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">合肥市公安局（警用机器狗）</span>
+                        <span class="card-date">2026-08-26</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://k.sina.com.cn/article_7517400647_1c0126e47059094iqu.html" target="_blank" rel="noopener">警用机器狗在合肥西站“上岗”</a></h3>
+                    <p class="card-overview">8月26日，警用四足机器狗正式在合肥西站“上岗”执勤，搭载高清摄像头、热成像仪、语音播报等模块，具备自主避障、上下台阶能力，底部配备轮式结构可在平坦路面快速移动。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">警用机器狗从试点走向交通枢纽常态化执勤，“科技+警务”深度融合；轮足复合设计成为公共场景机器狗新标配。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">16</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">印度Tirupati寺庙委员会（TTD）</span>
+                        <span class="card-date">2026-08-21</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://ddindia.co.in/2026/08/ttd-to-deploy-robotic-dog-for-wildlife-monitoring-in-woods-around-tirupati-temple/" target="_blank" rel="noopener">TTD将部署机器狗在Tirupati寺庙周围的树林里监测野生动物</a></h3>
+                    <p class="card-overview">印度Tirumala神庙拟部署四足机器狗用于周边森林野生动物实时监测，配备光学/热成像、LiDAR及AI系统，单台成本约17-21万元人民币，优先保护朝圣者安全。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">海外宗教景区野生动物监测成为机器狗新兴应用场景，中国产品价格优势在该需求下具备强竞争力。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">17</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">维他动力（Vbot）</span>
+                        <span class="card-date">2026-08-21</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.sohu.com/a/1065760574_121653759" target="_blank" rel="noopener">TÜV莱茵为Vbot超能机器狗颁发产品标准符合性证书及欧盟CE-RED指令符合性证书 </a></h3>
+                    <p class="card-overview">德国TÜV莱茵在WRC期间为Vbot超能机器狗颁发CE-RED及电气/机械/功能安全符合性证书，标志该消费级四足机器人满足欧盟法规要求，奠定出海基础。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">获得欧盟认证为国产消费级机器狗打开欧洲市场扫清合规障碍，出海能力从工业端延伸至消费端。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">18</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">大小机器人（"小途"四足机器狗）</span>
+                        <span class="card-date">2026-08-20</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://gmteight.com/flash/detail/1438658" target="_blank" rel="noopener">GMT Eight：上海西岸开放街区常态化无人巡逻</a></h3>
+                    <p class="card-overview">大小机器人"小途"四足机器狗正式入驻上海西岸片区，开展开放场景常态化无人巡逻作业，依靠A1超脑模块摆脱传统预设轨道限制，可在开放街道、大型活动场地自主导航、动态避障，支持24小时全天候集群调度，单人可管控多台机器狗，弥补人工巡逻时长不...</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">开放街区无人巡逻成为机器狗新落地场景，超脑模块赋能自主导航，集群调度降低人力成本。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">19</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">宇泛智能（灵猫Cyvet）</span>
+                        <span class="card-date">2026-08-20</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://szjj.china.com.cn/2026-08/20/content_43479626.html" target="_blank" rel="noopener">中国网：30天再进化！宇泛「灵猫」腾跃而来</a></h3>
+                    <p class="card-overview">宇泛智能全栈自研四足机器人“灵猫Cyvet”在WRC再次进化，距WAIC首秀仅30天即解锁背越式跳高1米、立定跳远2米新技能，15kg机身扛20kg负载，续航5.5小时。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">30天完成能力迭代验证全栈自研优势，跳跃能力将障碍变“可跨越路段”，从“炫技”走向“实用”的工程化能力加速兑现。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">20</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">LG CNS（韩国）</span>
+                        <span class="card-date">2026-08-20</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://en.infomaxai.com/news/articleView.html?idxno=135785" target="_blank" rel="noopener">韩联社/Yonhap Infomax：LG CNS机器人狗将巡逻首尔Tower Palace</a></h3>
+                    <p class="card-overview">LG CNS与Tower PMC签署MOU，计划第四季度在首尔江南Tower Palace部署四足安保机器人，通过PhysicalWorks平台训练运营，发现异常立即报警。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">韩国高端住宅引入四足安保机器人，亚洲市场 residential 场景商业化落地提速，物理AI从工业走向社区安保。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">21</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">高德</span>
+                        <span class="card-date">2026-08-19</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://m.toutiao.com/group/7675645011819577892/" target="_blank" rel="noopener">高德携全球首款开放环境全自主机器狗亮相WRC</a></h3>
+                    <p class="card-overview">高德推出全球首款开放环境全自主机器狗“途途”，依托地图能力实现城市级自主导航、室内外无缝切换，可用于导盲带路、园区巡检、末端配送，搭载ABot‑N导航基座模型，亚米级定位，支持语音交互与动态避障。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">地图导航能力与机器狗深度结合，自主导航降低部署门槛，民生服务场景（导盲、配送）或成新增长点。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">22</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">杰创智能</span>
+                        <span class="card-date">2026-08-19</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://m.toutiao.com/group/7675687157570273807/" target="_blank" rel="noopener">世界机器人大会｜杰创智能携机器狗亮相，展现广东企业硬核实力</a></h3>
+                    <p class="card-overview">杰创智能携“掌安星·AI智巡”系列五款机器狗参展，内置230余种识别算法，实现巡逻‑识别预警‑网捕全链条作业，已落地公安、学校、医院，现场完成多机集群协同实战演示。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">安防全链条作业能力趋于成熟，多机集群调度成标配，行业从单机展示转向系统化解决方案交付。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">23</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">璇玑动力</span>
+                        <span class="card-date">2026-08-19</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://m.toutiao.com/group/7675706818328297999/" target="_blank" rel="noopener">WRC直击四足机器人变身：跨过“炫技期”，扛起设备真干活</a></h3>
+                    <p class="card-overview">璇玑动力两款量产四足机器狗（Hypertron‑T01/SW01）亮相，搭载双光云台、气体传感、消防水炮等上装模块，已在电力、应急消防、智慧园区常态化落地，强调从表演转向实干。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">量产机型覆盖多行业真实工况，模块化上装设计提升场景适配性，“实干”能力成行业竞争核心。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">24</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">行业整体</span>
+                        <span class="card-date">2026-08-19</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://cn.chinadaily.com.cn/a/202608/19/WS6a859829a3105d3d7a27bd97.html" target="_blank" rel="noopener">2026世界机器人大会在京开幕</a></h3>
+                    <p class="card-overview">8月19日北京WRC开幕，大量四足机器狗不再局限特技表演，展品覆盖化工巡检、安防、应急救援、民生服务，采购需求明显提升，关注点转向接口、交付周期、售后与实际作业指标。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">行业从“秀肌肉”转向“拼落地”，采购方关注实际作业指标与交付能力，标准化验收体系亟需建立。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">25</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">宇泛智能</span>
+                        <span class="card-date">2026-08-17</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.donews.com/news/detail/4/6638129.html" target="_blank" rel="noopener">DoNews：宇泛智能发布自研四足机器人"灵猫"亮相WAIC</a></h3>
+                    <p class="card-overview">宇泛智能在WAIC 2026上发布全栈自研四足机器人"灵猫"，完成全球首个720°连续后空翻、1.3:1高载重能力演示、多机协同群舞等七组高动态动作。以NVIDIA Orin为核心，EDU版售价11999元起，Creator版支持RO...</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">720°连续后空翻对运动控制算法提出极高要求，1.3倍自重载重表明具备进入物流配送、应急救援等实际场景的潜力。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">26</div>
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-brand">宇树科技/国家人工智能应用中试基地</span>
@@ -322,7 +810,49 @@ body::after {
             </article>
 
             <article class="news-card">
-                <div class="card-rank">3</div>
+                <div class="card-rank">27</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">当虹科技/云深处科技</span>
+                        <span class="card-date">2026-08-17</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://m.toutiao.com/group/7674910133645787711/" target="_blank" rel="noopener">今日头条：当虹科技与云深处达成合作，机器狗搭载超远距弱网操控系统</a></h3>
+                    <p class="card-overview">当虹科技BlackEye Vision超低时延远程操控系统将标配到云深处部分机器狗机型，端到端时延控制在80毫秒以内，支持公网、卫星通信，弱网甚至断网环境可维持机器狗远程作业，面向消防、应急等偏远无网络作业场景，双方联合拓展特种四足机...</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">弱网远程操控突破机器狗作业边界，通信技术与机器人本体融合催生特种应用新赛道。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">28</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">两岸对比（台湾进口美国机器狗 vs 珠海大陆机器狗）</span>
+                        <span class="card-date">2026-08-14</span>
+                        <span class="card-score score-mid">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">7</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://m.gmw.cn/2026-08/14/content_1304548461.htm" target="_blank" rel="noopener">光明网：机器狗被踢倒后7秒才站起，台湾网友热议</a></h3>
+                    <p class="card-overview">台湾公听会展示的进口美国机器狗被踢倒后7秒才站起，与珠海航展大陆机器狗秒踢秒立形成强烈对比，引发两岸网友热议，台退役将领质疑台湾相关项目又在瞎搞花钱。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">技术差距肉眼可见，大陆四足机器人性能与性价比优势凸显，没对比没伤害成为两岸网友共识。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">29</div>
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-brand">魔法原子（MagicDog-W）、云深处（山猫S10/M20S）</span>
@@ -343,7 +873,7 @@ body::after {
             </article>
 
             <article class="news-card">
-                <div class="card-rank">4</div>
+                <div class="card-rank">30</div>
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-brand">智身新创</span>
@@ -364,7 +894,70 @@ body::after {
             </article>
 
             <article class="news-card">
-                <div class="card-rank">5</div>
+                <div class="card-rank">31</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">传化具身智能</span>
+                        <span class="card-date">2026-08-25</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">6</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://finance.sina.com.cn/stock/relnews/cn/2026-08-27/doc-iniptxkt9031449.shtml" target="_blank" rel="noopener">传化成立具身智能公司，携巡检解决方案亮相香港GIS全球创新展</a></h3>
+                    <p class="card-overview">8月25日至27日，2026第二届GIS全球创新展在香港举行，杭州传化具身智能科技有限公司携四足巡检机器狗及具身智能巡检解决方案亮相展会。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">四足巡检机器人持续向粤港澳大湾区及国际市场拓展，行业展会成为企业出海重要窗口。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">32</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">宇树科技（Unitree）</span>
+                        <span class="card-date">2026-08-22</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">6</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://international.astroawani.com/technology-news/insight-how-us-military-funding-propelled-chinas-robot-dogs" target="_blank" rel="noopener">INSIGHT -美国军事资金如何推动中国的机器狗</a></h3>
+                    <p class="card-overview">路透社报道称，中国宇树等公司廉价机器狗的技术基础很大程度上源于美国军方资助的四足机器人研究，相关突破已公开成为行业共同技术起点。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">海外媒体承认美国基础研究外溢效应，但国产厂商在工程化、成本控制与量产能力上的优势才是市场主导关键。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">33</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">宇树科技</span>
+                        <span class="card-date">2026-08-22</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">6</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://ictframe.com/from-evs-to-robot-dogs/#respond" target="_blank" rel="noopener">从电动汽车到机器狗：尼泊尔在NADA的快速电动交通转型</a></h3>
+                    <p class="card-overview">宇树人形机器人G1与四足Go2将亮相8月25日尼泊尔NADA车展，在尼泊尔电动化转型背景下成为展会亮点。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">国产机器狗持续进入南亚市场，在非传统科技展会中亮相说明产品认知度正向更广泛人群扩散。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">34</div>
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-brand">中联重科（D15/D40四足机器狗）</span>
@@ -385,7 +978,7 @@ body::after {
             </article>
 
             <article class="news-card">
-                <div class="card-rank">6</div>
+                <div class="card-rank">35</div>
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-brand">行业整体（南方电网/吠云）</span>
@@ -406,7 +999,70 @@ body::after {
             </article>
 
             <article class="news-card">
-                <div class="card-rank">7</div>
+                <div class="card-rank">36</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">宇树/波士顿动力/小米/腾讯/云深处</span>
+                        <span class="card-date">2026-08-17</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">6</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.sohu.com/a/1046301466_121081803" target="_blank" rel="noopener">搜狐：2026四足机器人深度测评</a></h3>
+                    <p class="card-overview">2026年8月发布四足机器人深度测评，对比宇树Go2 Pro、波士顿动力Spot、小米CyberDog 2、腾讯Max 2、云深处绝影X1五款产品。宇树Go2 Pro实测续航142分钟，预装Qwen-2.5边缘大模型；波士顿动力Spo...</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">消费级市场迎来爆发拐点，国产机器人在性价比与AI本地化部署上优势明显，海外品牌面临高价格与低适配度双重压力。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">37</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">中坚科技（子公司桦之坚）</span>
+                        <span class="card-date">2026-08-17</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">6</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://finance-app.people.cn/n1/2026/0723/c1004-40766663.html" target="_blank" rel="noopener">人民网：中坚科技携四足机器狗"灵睿P1"亮相WAIC</a></h3>
+                    <p class="card-overview">中坚科技旗下子公司桦之坚携四足机器狗"灵睿P1"亮相WAIC 2026，展示核心产品与性能测试体验。母公司中坚智氪实现轮毂电机、行星关节模组等核心部件全链路自研，具备IP67防护能力，背靠百万级自动化产线可支撑规模化交付。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">传统精密制造企业加速布局具身智能，核心零部件自研自产成为竞争壁垒，关节模组等"卡脖子"环节国产化加速。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">38</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">行业整体（普渡/宇树/云深处）</span>
+                        <span class="card-date">2026-08-17</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">6</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="http://www.xtrb.cn/syunf/2026-08/17/content_1273465.htm" target="_blank" rel="noopener">天极网：2026年机器狗安防巡逻采购验收指南</a></h3>
+                    <p class="card-overview">业内发布机器狗安防巡逻采购指南，对比普渡D5、宇树B2/Go2、云深处三家品牌。建议采购方从路线适配性、载荷需求、告警闭环、弱网恢复、补能维护六个维度验收。普渡D5 IP67防护+宽温范围更贴近完整采购对象。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">行业从"拼硬件"转向"拼服务"，采购方需关注完整任务闭环而非单纯动作展示，POC真实路线验证比展示视频更有价值。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">39</div>
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-brand">山东柔克智能（麒麟X2四足巡检机器狗）</span>
@@ -425,6 +1081,69 @@ body::after {
                 </div>
                 <div class="card-glow"></div>
             </article>
+
+            <article class="news-card">
+                <div class="card-rank">40</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">挪威（机器狗Rashko）</span>
+                        <span class="card-date">2026-08-22</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">5</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://bnrnews.bg/en/post/518483/customs-dog-and-robot-dog-have-exclusive-meeting-at-teen-boom-fest26-in-burgas" target="_blank" rel="noopener">在布尔加斯举行的青少年繁荣节上，海关狗和机器狗进行了独家会面</a></h3>
+                    <p class="card-overview">保加利亚“青少年热潮节”上，海关嗅探犬与挪威制造的机器狗Rashko（日行20km/负重10kg）进行互动展示，引发公众关注。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">机器狗与生物犬同台展示，体现公众对机器狗在公共服务领域角色的好奇心与接受度提升，但偏事件性传播。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">41</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">德国AOR实验室（机器狗Scout）</span>
+                        <span class="card-date">2026-08-21</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">5</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://aor.cs.rptu.de/en?tx_news_pi1" target="_blank" rel="noopener">MI(N)Tmachwelt 2026 -花园展的实验日</a></h3>
+                    <p class="card-overview">德国凯泽斯劳滕花园展“实验日”活动中，AOR实验室展示机器狗Scout，吸引青少年互动体验编程与机器人技术。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">欧洲科普教育场景中机器狗作为STEM教具使用，反映四足机器人正成为青少年科技教育载体，但商业影响有限。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-rank">42</div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-brand">行业整体/消费级</span>
+                        <span class="card-date">2026-08-19</span>
+                        <span class="card-score score-low">
+                            <span class="score-label">AI热度</span>
+                            <span class="score-value">5</span>
+                        </span>
+                    </div>
+                    <h3 class="card-title"><a href="https://www.foxnews.com/video/6403610590112" target="_blank" rel="noopener">Husky chases robot dog through park and refuses to let mechanical rival escape</a></h3>
+                    <p class="card-overview">福克斯新闻发布公园内哈士奇追逐四足机器狗视频，在海外社交平台大量传播，成为消费级机器狗出圈热点事件。</p>
+                    <div class="card-summary">
+                        <span class="summary-tag">深度解读</span>
+                        <span class="summary-text">消费级机器狗进入公共场景引发社交传播，公众接受度提升，但需关注人机/动物交互安全性及伦理问题。</span>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </article>
                 </div>
                 <div class="load-more">
                     <button class="load-more-btn" id="loadMoreBtn">加载更多</button>
@@ -433,68 +1152,64 @@ body::after {
             <aside class="sidebar">
                 <div class="sidebar-widget">
                     <div class="widget-header">
-                        <span class="widget-title"><span>⚙️</span> 工业应用热度榜</span>
+                        <span class="widget-title"><span>⚙️</span> 工业热度榜</span>
                     </div>
                     <div class="widget-body">
                         <ul class="rank-list">
             <li class="rank-item">
                 <span class="rank-num rank-top rank-1">1</span>
                 <div class="rank-info">
-                    <p class="rank-title">央视新闻/北京日报：超3000件展品亮相，国产机器人挑战高危硬核任务</p>
-                    <span class="rank-score">热度 8</span>
+                    <p class="rank-title">2026中国国际大数据产业博览会开幕 372家中外企业参展</p>
+                    <span class="rank-score">热度 10</span>
                 </div>
             </li>
 
             <li class="rank-item">
                 <span class="rank-num rank-top rank-2">2</span>
                 <div class="rank-info">
-                    <p class="rank-title">今日头条：全国首家具身智能认证中心落户杭州</p>
-                    <span class="rank-score">热度 7</span>
+                    <p class="rank-title">上海证券报：宇树上市后，王兴兴最新公开发声</p>
+                    <span class="rank-score">热度 9</span>
                 </div>
             </li>
 
             <li class="rank-item">
                 <span class="rank-num rank-top rank-3">3</span>
                 <div class="rank-info">
-                    <p class="rank-title">太平洋科技：四足机器人集体汪化，机器猫没上桌</p>
-                    <span class="rank-score">热度 7</span>
+                    <p class="rank-title">绍兴网：绍兴知名企业，机器人持证上岗正式入职</p>
+                    <span class="rank-score">热度 9</span>
                 </div>
             </li>
 
             <li class="rank-item">
                 <span class="rank-num ">4</span>
                 <div class="rank-info">
-                    <p class="rank-title">“江苏造”智能机器人海外批量“就业”</p>
-                    <span class="rank-score">热度 6</span>
+                    <p class="rank-title">中新企业签了个大单！四足机器人先去新加坡，再攻东南亚</p>
+                    <span class="rank-score">热度 8</span>
                 </div>
             </li>
 
             <li class="rank-item">
                 <span class="rank-num ">5</span>
                 <div class="rank-info">
-                    <p class="rank-title">中联重科全系自研机器人产品亮相WRC</p>
-                    <span class="rank-score">热度 6</span>
+                    <p class="rank-title">智身科技刘宇龙：让技术路径成熟的机器人先「用起来」</p>
+                    <span class="rank-score">热度 8</span>
                 </div>
             </li></ul>
                     </div>
                 </div>
                 <div class="sidebar-widget">
                     <div class="widget-header">
-                        <span class="widget-title"><span>📊</span> 分类数据</span>
+                        <span class="widget-title"><span>📊</span> 分类总览</span>
                     </div>
                     <div class="stats-grid">
-                        <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">资讯总数</div></div>
-                        <div class="stat-item"><div class="stat-value">6.6</div><div class="stat-label">平均热度</div></div>
-                        <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">覆盖天数</div></div>
-                        <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">品牌机构</div></div>
+                        <div class="stat-item"><div class="stat-value">42</div><div class="stat-label">本类资讯</div></div>
+                        <div class="stat-item"><div class="stat-value">7.0</div><div class="stat-label">平均热度</div></div>
+                        <div class="stat-item"><div class="stat-value">13</div><div class="stat-label">覆盖天数</div></div>
+                        <div class="stat-item"><div class="stat-value">40</div><div class="stat-label">品牌机构</div></div>
                     </div>
-                </div>
-                <div class="sidebar-widget">
-                    <div class="widget-header">
-                        <span class="widget-title"><span>🌐</span> 其他分类</span>
-                    </div>
-                    <div class="widget-body">
-                        <a href="capital.html" class="rank-item" style="text-decoration:none"><span class="rank-num">💰</span><div class="rank-info"><p class="rank-title">资本动态</p><span class="rank-score">7 条资讯</span></div></a><a href="tech.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🔬</span><div class="rank-info"><p class="rank-title">技术突破</p><span class="rank-score">12 条资讯</span></div></a><a href="security.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🛡️</span><div class="rank-info"><p class="rank-title">安防巡检</p><span class="rank-score">7 条资讯</span></div></a><a href="overseas.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🌐</span><div class="rank-info"><p class="rank-title">海外市场</p><span class="rank-score">9 条资讯</span></div></a><a href="consumer.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🏠</span><div class="rank-info"><p class="rank-title">消费民生</p><span class="rank-score">8 条资讯</span></div></a><a href="expo.html" class="rank-item" style="text-decoration:none"><span class="rank-num">🎪</span><div class="rank-info"><p class="rank-title">行业盛会</p><span class="rank-score">4 条资讯</span></div></a>
+                    <div class="chart-widget">
+                        <p style="font-size:12px;color:var(--muted);margin-bottom:8px;text-align:center;">点击饼图扇区跳转至对应分类</p>
+                        <div id="catDistChart" class="chart-container" style="min-height:260px;"></div>
                     </div>
                 </div>
             </aside>
@@ -518,17 +1233,13 @@ body::after {
                         <h4>资讯分类</h4>
                         <ul>
                             <li><a href="capital.html">资本动态</a></li>
-                            <li><a href="tech.html">技术突破</a></li>
-                            <li><a href="security.html">安防巡检</a></li>
-                            <li><a href="industry.html">工业应用</a></li>
-                            <li><a href="overseas.html">海外市场</a></li>
+                            <li><a href="industry.html">工业</a></li>
+                            <li><a href="consumer.html">消费民生</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>更多</h4>
                         <ul>
-                            <li><a href="consumer.html">消费民生</a></li>
-                            <li><a href="expo.html">行业盛会</a></li>
                             <li><a href="products.html">WRC展品</a></li>
                         </ul>
                     </div>
@@ -543,7 +1254,7 @@ body::after {
             </div>
         </div>
     </footer>
-
+<script src="./_shared/js/echarts.min.js"></script>
 <script>
 
     (function() {
@@ -580,6 +1291,68 @@ body::after {
     })();
     
 
+
+(function() {
+    const style = getComputedStyle(document.documentElement);
+    var ink = style.getPropertyValue('--ink').trim();
+    var muted = style.getPropertyValue('--muted').trim();
+    var rule = style.getPropertyValue('--rule').trim();
+    var bg2 = style.getPropertyValue('--bg2').trim();
+    var chart = echarts.init(document.getElementById('catDistChart'), null, { renderer: 'svg' });
+    var catData = [{"name": "\u5de5\u4e1a", "value": 42, "itemStyle": {"color": "#22c55e"}}, {"name": "\u8d44\u672c\u52a8\u6001", "value": 7, "itemStyle": {"color": "#f59e0b"}}, {"name": "\u6d88\u8d39\u6c11\u751f", "value": 5, "itemStyle": {"color": "#ec4899"}}];
+    var catKeys = ["industry", "capital", "consumer"];
+    var currentCat = 'industry';
+    chart.setOption({
+        animation: false,
+        tooltip: {
+            trigger: 'item',
+            appendToBody: true,
+            backgroundColor: bg2,
+            borderColor: rule,
+            textStyle: { color: ink },
+            formatter: function(p) {
+                return p.name + ': ' + p.value + ' 条 (' + p.percent + '%)';
+            }
+        },
+        series: [{
+            type: 'pie',
+            radius: ['40%', '68%'],
+            center: ['50%', '50%'],
+            avoidLabelOverlap: true,
+            itemStyle: { borderRadius: 4, borderColor: bg2, borderWidth: 2 },
+            label: {
+                show: true,
+                position: 'outside',
+                color: muted,
+                fontSize: 11,
+                formatter: '{b}\n{c}条'
+            },
+            labelLine: { lineStyle: { color: rule } },
+            emphasis: {
+                itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0,0,0,0.5)' },
+                label: { fontSize: 13, fontWeight: 'bold', color: ink }
+            },
+            data: catData.map(function(d, i) {
+                var isCurrent = catKeys[i] === currentCat;
+                return {
+                    name: d.name,
+                    value: d.value,
+                    itemStyle: {
+                        color: d.itemStyle.color,
+                        borderColor: isCurrent ? ink : bg2,
+                        borderWidth: isCurrent ? 3 : 2
+                    },
+                    label: { color: isCurrent ? ink : muted, fontWeight: isCurrent ? 'bold' : 'normal' }
+                };
+            })
+        }]
+    });
+    chart.on('click', function(p) {
+        var idx = catData.findIndex(function(d) { return d.name === p.name; });
+        if (idx >= 0) { window.location.href = catKeys[idx] + '.html'; }
+    });
+    window.addEventListener('resize', function() { chart.resize(); });
+})();
 
 </script>
 </body>

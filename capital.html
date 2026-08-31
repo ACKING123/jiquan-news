@@ -169,6 +169,8 @@ body::after {
 .product-card:hover::before { opacity: 1; }
 .product-id { font-family: 'JetBrainsMono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 8px; }
 .product-name { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 6px; line-height: 1.3; }
+.product-name a { color: var(--ink); text-decoration: none; transition: color 0.3s ease; }
+.product-name a:hover { color: var(--accent); }
 .product-company { font-size: 13px; color: var(--accent2); margin-bottom: 10px; font-weight: 500; }
 .product-features { font-size: 13px; color: var(--muted); line-height: 1.7; }
 .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
@@ -422,53 +424,6 @@ body::after {
                 </div>
             </div>
             <aside class="sidebar">
-                <div class="sidebar-widget">
-                    <div class="widget-header">
-                        <span class="widget-title"><span>💰</span> 资本动态热度榜</span>
-                    </div>
-                    <div class="widget-body">
-                        <ul class="rank-list">
-            <li class="rank-item">
-                <span class="rank-num rank-top rank-1">1</span>
-                <div class="rank-info">
-                    <p class="rank-title">宇树上市开盘暴涨 6 倍，王兴兴的 10 年长跑进入下半场</p>
-                    <span class="rank-score">热度 10</span>
-                </div>
-            </li>
-
-            <li class="rank-item">
-                <span class="rank-num rank-top rank-2">2</span>
-                <div class="rank-info">
-                    <p class="rank-title">界面新闻/经济参考报：智元机器人启动赴港上市</p>
-                    <span class="rank-score">热度 10</span>
-                </div>
-            </li>
-
-            <li class="rank-item">
-                <span class="rank-num rank-top rank-3">3</span>
-                <div class="rank-info">
-                    <p class="rank-title">和讯网：宇树科技科创板IPO发行安排落定</p>
-                    <span class="rank-score">热度 10</span>
-                </div>
-            </li>
-
-            <li class="rank-item">
-                <span class="rank-num ">4</span>
-                <div class="rank-info">
-                    <p class="rank-title">小鹏机器人首轮融资9亿美元、估值63亿美元刷新纪录，二季度净亏损...</p>
-                    <span class="rank-score">热度 9</span>
-                </div>
-            </li>
-
-            <li class="rank-item">
-                <span class="rank-num ">5</span>
-                <div class="rank-info">
-                    <p class="rank-title">36氪：云深处科创板IPO问询回复细节披露</p>
-                    <span class="rank-score">热度 8</span>
-                </div>
-            </li></ul>
-                    </div>
-                </div>
                 <div class="sidebar-widget">
                     <div class="widget-header">
                         <span class="widget-title"><span>📊</span> 分类总览</span>

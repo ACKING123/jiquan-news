@@ -174,7 +174,7 @@ def gen_slide(row, index):
     img_num = (index % 5) + 1
     active = 'active' if index == 0 else ''
     return f'''            <div class="slide {active}" data-index="{index}" data-url="{url}" style="cursor:pointer;">
-                <div class="slide-bg" style="background-image: url('assets/images/slide{img_num}.jpg');"></div>
+                <div class="slide-bg" style="background-image: url('assets/images/slide{img_num}.jpg?v=20260904');"></div>
                 <div class="slide-content">
                     <div class="card-meta" style="margin-bottom:16px;">
                         <span class="card-score {score_class(row['ai_score'])}">
